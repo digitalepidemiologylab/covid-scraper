@@ -1,0 +1,107 @@
+import logging
+from logging.handlers import RotatingFileHandler
+import re
+
+from bs4 import BeautifulSoup
+from selenium.common.exceptions import TimeoutException
+
+from helpers import wait_until_xpath
+
+# Create logger
+logger = logging.getLogger('soup_posts')
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+printout_handler = logging.StreamHandler()
+writetofile_handler = RotatingFileHandler(
+    'logs/log_posts.txt', mode='a', maxBytes=5*1024*1024, 
+    backupCount=2, encoding=None, delay=0)
+
+printout_handler.setLevel(logging.INFO)
+printout_handler.setFormatter(formatter)
+writetofile_handler.setLevel(logging.INFO)
+writetofile_handler.setFormatter(formatter)
+
+logger.addHandler(printout_handler)
+logger.addHandler(writetofile_handler)
+
+
+class SoupPosts:
+    @classmethod
+    def set_browser(cls, browser):
+        cls.browser = browser
+
+    @classmethod
+    def monaco(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                   'Covid-19' in tag.get('title', '') and \
+                   'cas' in tag.get('title', '')
+        def post_condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'p' and \
+                   len(tag.contents) == 1 and \
+                   'personnes guéries s’élève' in tag.contents[0]
+        tag = soup.find(condition)
+        url = 'https://www.gouv.mc' + tag['href']
+        try:
+            wait_until_xpath(
+                cls.browser,
+                url,
+                "//*[contains(text(), 'personnes guéries s’élève')]",
+                logger)
+        except TimeoutException:
+            logger.warning("The link '%s' has not loaded.", url)
+            return tag, None
+        post_source = cls.browser.page_source
+        post_soup = BeautifulSoup(post_source, 'html.parser')
+        post_tag = post_soup.find(post_condition)
+        logger.debug('Monaco post tag: %s', post_tag)
+        cases = re.search(
+            'personnes guéries s’élève [a-zàâçéèêëîïôûùüÿñæœ .-]*([0-9]+)\.',
+            post_tag.contents[0]
+        ).group(1)
+        return tag, int(cases)
+
+    @classmethod
+    def san_marino(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            keywords = ['aggiornamento', 'epidemia', 'covid-19', 'campagna', 'vaccinale']
+            return tag.name == 'a' and \
+                   all([kw in tag.get('title', '').lower() for kw in keywords])
+        def post_condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'p' and \
+                   len(tag.contents) == 1 and \
+                   'Il numero totale di persone contagiate individuate ' \
+                   'dall’inizio della pandemia fino alla mezzanotte ' \
+                   'di ieri è di' in tag.contents[0]
+        tag = soup.find(condition)
+        url = 'https://www.iss.sm' + tag['href']
+        try:
+            wait_until_xpath(
+                cls.browser,
+                url,
+                "//*[contains(text(), 'Il numero totale di persone "
+                "contagiate individuate dall’inizio della pandemia "
+                "fino alla mezzanotte di ieri è di')]",
+                logger)
+        except TimeoutException:
+            logger.warning("The link '%s' has not loaded.", url)
+            return tag, None
+        post_source = cls.browser.page_source
+        post_soup = BeautifulSoup(post_source, 'html.parser')
+        post_tag = post_soup.find(post_condition)
+        cases = re.search(
+            'Il numero totale di persone contagiate individuate '
+            'dall’inizio della pandemia fino alla mezzanotte '
+            'di ieri è di ([0-9.]+)',
+            post_tag.contents[0]
+        ).group(1).replace('.', '')
+        return tag, int(cases)

@@ -1,0 +1,326 @@
+2021-11-09 11:53:41,286 - log_watcher - ERROR - User `arn:aws:iam::874942657130:user/crowdbreaks-prd' is not authorized to perform `ses:SendEmail' on resource `arn:aws:ses:eu-central-1:874942657130:identity/no-reply@crowdbreaks.org'
+2021-11-09 11:55:02,086 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.com
+2021-11-09 11:55:19,348 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 11:56:00,362 - log_watcher - ERROR - User `arn:aws:iam::874942657130:user/crowdbreaks-prd' is not authorized to perform `ses:SendEmail' on resource `arn:aws:ses:eu-central-1:874942657130:identity/olesia.altunina@epfl.ch'
+2021-11-09 11:57:00,309 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 11:58:00,333 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 11:59:00,367 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:00:00,368 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:01:00,394 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:02:00,355 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:03:00,397 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:04:00,325 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: Crowdbreaks <no-reply@crowdbreaks.org>, olesia.altunina@epfl.ch
+2021-11-09 12:04:47,834 - log_watcher - ERROR - Email address is not verified. The following identities failed the check in region EU-CENTRAL-1: olesia.altunina@epfl.ch
+2021-11-09 12:06:20,134 - log_watcher - INFO - Email sent! Message ID: 0107017d04609be1-f3ec9ac7-54e3-46c5-bdc1-a14baf88eda1-000000.
+2021-11-09 12:09:11,330 - log_watcher - INFO - Email sent! Message ID: 0107017d046338aa-15889417-9fa9-4e38-9fbb-88b92cf6d2e9-000000.
+2021-11-09 12:13:45,533 - log_watcher - INFO - 2021-11-09 12:12
+2021-11-09 12:13:45,534 - log_watcher - INFO - 2021-11-09 12:09:15,501 - scraper_wgets - INFO - CYCLE COMPLETE: 15 s
+2021-11-09 12:13:45,534 - log_watcher - INFO - 2021-11-09 12:10:12,694 - scraper_wgets - INFO - CYCLE COMPLETE: 12 s
+2021-11-09 12:13:45,534 - log_watcher - INFO - 2021-11-09 12:11:20,654 - scraper_wgets - INFO - CYCLE COMPLETE: 20 s
+2021-11-09 12:13:45,534 - log_watcher - INFO - 2021-11-09 12:12:13,933 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:13:45,535 - log_watcher - INFO - 2021-11-09 12:13:13,806 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:13:45,535 - log_watcher - INFO - 
+2021-11-09 12:13:45,540 - log_watcher - INFO - 2021-11-09 12:12
+2021-11-09 12:13:45,541 - log_watcher - INFO - 2021-11-09 12:09:31,247 - scraper_selenium - INFO - CYCLE COMPLETE: 31 s
+2021-11-09 12:13:45,541 - log_watcher - INFO - 2021-11-09 12:10:31,137 - scraper_selenium - INFO - CYCLE COMPLETE: 31 s
+2021-11-09 12:13:45,541 - log_watcher - INFO - 2021-11-09 12:11:30,299 - scraper_selenium - INFO - CYCLE COMPLETE: 30 s
+2021-11-09 12:13:45,541 - log_watcher - INFO - 2021-11-09 12:12:29,504 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:13:45,541 - log_watcher - INFO - 2021-11-09 12:13:29,327 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:13:45,541 - log_watcher - INFO - 
+2021-11-09 12:13:45,547 - log_watcher - INFO - 2021-11-09 12:12
+2021-11-09 12:13:45,547 - log_watcher - INFO - 2021-11-09 12:09:07,280 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:13:45,547 - log_watcher - INFO - 2021-11-09 12:10:07,228 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:13:45,547 - log_watcher - INFO - 2021-11-09 12:11:07,188 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:13:45,547 - log_watcher - INFO - 2021-11-09 12:12:07,686 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:13:45,548 - log_watcher - INFO - 2021-11-09 12:13:07,279 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:13:45,548 - log_watcher - INFO - 
+2021-11-09 12:13:45,554 - log_watcher - INFO - 2021-11-09 12:12
+2021-11-09 12:13:45,554 - log_watcher - INFO - 2021-11-09 12:09:09,485 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:13:45,554 - log_watcher - INFO - 2021-11-09 12:10:09,488 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:13:45,554 - log_watcher - INFO - 2021-11-09 12:11:09,385 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:13:45,555 - log_watcher - INFO - 2021-11-09 12:12:09,440 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:13:45,555 - log_watcher - INFO - 2021-11-09 12:13:09,608 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:13:45,555 - log_watcher - INFO - 
+2021-11-09 12:13:45,848 - log_watcher - INFO - Email sent! Message ID: 0107017d04676919-63b4c0f6-2474-408c-b115-bd967a8899ac-000000.
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:14
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:11:20,654 - scraper_wgets - INFO - CYCLE COMPLETE: 20 s
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:12:13,933 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:13:13,806 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:14:14,481 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:15:15,772 - log_watcher - INFO - THERE
+2021-11-09 12:15:15,772 - log_watcher - INFO - 2021-11-09 12:15:14,739 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:15:15,772 - log_watcher - INFO - 
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:14
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:10:31,137 - scraper_selenium - INFO - CYCLE COMPLETE: 31 s
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:11:30,299 - scraper_selenium - INFO - CYCLE COMPLETE: 30 s
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:12:29,504 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:13:29,327 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:15:15,777 - log_watcher - INFO - 2021-11-09 12:14:28,241 - scraper_selenium - INFO - CYCLE COMPLETE: 28 s
+2021-11-09 12:15:15,777 - log_watcher - INFO - THERE
+2021-11-09 12:15:15,777 - log_watcher - INFO - 
+2021-11-09 12:15:15,781 - log_watcher - INFO - 2021-11-09 12:14
+2021-11-09 12:15:15,781 - log_watcher - INFO - 2021-11-09 12:11:07,188 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:15:15,782 - log_watcher - INFO - 2021-11-09 12:12:07,686 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:15:15,782 - log_watcher - INFO - 2021-11-09 12:13:07,279 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:15:15,782 - log_watcher - INFO - 2021-11-09 12:14:07,104 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:15:15,782 - log_watcher - INFO - THERE
+2021-11-09 12:15:15,782 - log_watcher - INFO - 2021-11-09 12:15:07,836 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:15:15,782 - log_watcher - INFO - 
+2021-11-09 12:15:15,787 - log_watcher - INFO - 2021-11-09 12:14
+2021-11-09 12:15:15,788 - log_watcher - INFO - 2021-11-09 12:11:09,385 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:15:15,788 - log_watcher - INFO - 2021-11-09 12:12:09,440 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:15:15,788 - log_watcher - INFO - 2021-11-09 12:13:09,608 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:15:15,788 - log_watcher - INFO - 2021-11-09 12:14:09,510 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:15:15,788 - log_watcher - INFO - THERE
+2021-11-09 12:15:15,788 - log_watcher - INFO - 2021-11-09 12:15:09,572 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:15:15,788 - log_watcher - INFO - 
+2021-11-09 12:15:16,127 - log_watcher - INFO - Email sent! Message ID: 0107017d0468c9a5-288d8549-73c5-421e-8c4f-02af4dc7acd4-000000.
+2021-11-09 12:17:07,467 - log_watcher - INFO - 2021-11-09 12:16
+2021-11-09 12:17:07,468 - log_watcher - INFO - 2021-11-09 12:12:13,933 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:17:07,468 - log_watcher - INFO - 2021-11-09 12:13:13,806 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:17:07,468 - log_watcher - INFO - 2021-11-09 12:14:14,481 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:07,468 - log_watcher - INFO - 2021-11-09 12:15:14,739 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:07,468 - log_watcher - INFO - 2021-11-09 12:16:14,359 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:07,468 - log_watcher - INFO - THERE
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:16
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:13:13,806 - scraper_wgets - INFO - CYCLE COMPLETE: 13 s
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:14:14,481 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:15:14,739 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:16:14,359 - scraper_wgets - INFO - CYCLE COMPLETE: 14 s
+2021-11-09 12:17:18,833 - log_watcher - INFO - THERE
+2021-11-09 12:17:18,833 - log_watcher - INFO - 2021-11-09 12:17:12,372 - scraper_wgets - INFO - CYCLE COMPLETE: 12 s
+2021-11-09 12:17:18,833 - log_watcher - INFO - 
+2021-11-09 12:17:18,838 - log_watcher - INFO - 2021-11-09 12:16
+2021-11-09 12:17:18,838 - log_watcher - INFO - 2021-11-09 12:12:29,504 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:17:18,838 - log_watcher - INFO - 2021-11-09 12:13:29,327 - scraper_selenium - INFO - CYCLE COMPLETE: 29 s
+2021-11-09 12:17:18,839 - log_watcher - INFO - 2021-11-09 12:14:28,241 - scraper_selenium - INFO - CYCLE COMPLETE: 28 s
+2021-11-09 12:17:18,839 - log_watcher - INFO - 2021-11-09 12:15:30,242 - scraper_selenium - INFO - CYCLE COMPLETE: 30 s
+2021-11-09 12:17:18,839 - log_watcher - INFO - 2021-11-09 12:16:31,517 - scraper_selenium - INFO - CYCLE COMPLETE: 31 s
+2021-11-09 12:17:18,839 - log_watcher - INFO - THERE
+2021-11-09 12:17:18,839 - log_watcher - INFO - 
+2021-11-09 12:17:18,843 - log_watcher - INFO - 2021-11-09 12:16
+2021-11-09 12:17:18,844 - log_watcher - INFO - 2021-11-09 12:13:07,279 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:17:18,844 - log_watcher - INFO - 2021-11-09 12:14:07,104 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:17:18,844 - log_watcher - INFO - 2021-11-09 12:15:07,836 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:17:18,844 - log_watcher - INFO - 2021-11-09 12:16:07,260 - scraper_posts - INFO - CYCLE COMPLETE: 7 s
+2021-11-09 12:17:18,844 - log_watcher - INFO - THERE
+2021-11-09 12:17:18,844 - log_watcher - INFO - 2021-11-09 12:17:08,420 - scraper_posts - INFO - CYCLE COMPLETE: 8 s
+2021-11-09 12:17:18,844 - log_watcher - INFO - 
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:16
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:13:09,608 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:14:09,510 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:15:09,572 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:16:09,437 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:17:18,849 - log_watcher - INFO - THERE
+2021-11-09 12:17:18,849 - log_watcher - INFO - 2021-11-09 12:17:09,458 - scraper_csvs - INFO - CYCLE COMPLETE: 9 s
+2021-11-09 12:17:18,850 - log_watcher - INFO - 
+2021-11-09 12:17:18,850 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:17:50,355 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:18:00,027 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:19:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:20:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:21:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:22:00,025 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:23:00,048 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:24:00,068 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:25:00,039 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:26:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:27:00,065 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:28:00,032 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:29:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:30:00,058 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:31:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:32:00,024 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:33:00,030 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:34:00,069 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:35:00,058 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:36:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:37:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:38:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:39:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:40:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:41:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:42:00,021 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:43:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:44:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:45:00,040 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:46:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:47:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:48:00,063 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:49:00,071 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:50:00,033 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:51:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:52:00,072 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:53:00,073 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:54:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:55:00,037 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:56:00,049 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:57:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:58:00,061 - log_watcher - INFO - Everything is fine.
+2021-11-09 12:59:00,025 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:00:00,033 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:01:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:02:00,048 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:03:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:04:00,049 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:05:00,063 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:06:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:07:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:08:00,032 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:09:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:10:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:11:00,074 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:12:00,041 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:13:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:14:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:15:00,030 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:16:00,022 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:17:00,033 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:18:00,018 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:19:00,061 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:20:00,028 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:21:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:22:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:23:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:24:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:25:00,034 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:26:00,021 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:27:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:28:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:29:00,085 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:30:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:31:00,058 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:32:00,027 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:33:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:34:00,059 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:35:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:36:00,033 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:37:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:38:00,033 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:39:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:40:00,521 - log_watcher - INFO - Email sent! Message ID: 0107017d04b65e45-c2488d4f-08cb-4191-9103-a9bb0f2f9216-000000.
+2021-11-09 13:41:00,403 - log_watcher - INFO - Email sent! Message ID: 0107017d04b74873-7b1e89ff-f323-4a06-85ee-1bcaf7615714-000000.
+2021-11-09 13:42:00,401 - log_watcher - INFO - Email sent! Message ID: 0107017d04b832d5-90f56b3d-ab1f-4b3c-9259-138d810ce1b0-000000.
+2021-11-09 13:43:01,506 - log_watcher - INFO - Email sent! Message ID: 0107017d04b92108-26f91ee0-4424-4e5c-b168-0e9d24f52d21-000000.
+2021-11-09 13:44:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:45:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:46:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:47:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:48:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:49:00,084 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:50:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:51:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 13:52:00,414 - log_watcher - INFO - Email sent! Message ID: 0107017d04c15aa2-20c3a4f9-931a-4492-aed5-eaf63db04310-000000.
+2021-11-09 13:53:00,421 - log_watcher - INFO - Email sent! Message ID: 0107017d04c24507-293471be-ce31-4785-9805-7f4b5369dc48-000000.
+2021-11-09 13:54:00,498 - log_watcher - INFO - Email sent! Message ID: 0107017d04c32f9a-0787ba36-2281-4ea2-86b2-9707eccb1616-000000.
+2021-11-09 13:55:00,403 - log_watcher - INFO - Email sent! Message ID: 0107017d04c419a0-6379f67b-bb1e-4236-9b4f-e57933104857-000000.
+2021-11-09 13:56:00,477 - log_watcher - INFO - Email sent! Message ID: 0107017d04c50450-c5dcbebe-d288-4c38-904c-8a3f8fe93b11-000000.
+2021-11-09 13:57:00,412 - log_watcher - INFO - Email sent! Message ID: 0107017d04c5ee6e-12df7c35-aa85-400f-a42b-6bb6b19cdee7-000000.
+2021-11-09 13:58:00,482 - log_watcher - INFO - Email sent! Message ID: 0107017d04c6d90f-c925d69b-57ec-4431-b308-8a1b509c00e7-000000.
+2021-11-09 13:59:00,413 - log_watcher - INFO - Email sent! Message ID: 0107017d04c7c34b-79ca12a4-aa50-4475-9a15-1f3684d22776-000000.
+2021-11-09 14:00:00,372 - log_watcher - INFO - Email sent! Message ID: 0107017d04c8ad84-fb165b5d-47cd-4662-b1c4-85eac17e9564-000000.
+2021-11-09 14:01:00,417 - log_watcher - INFO - Email sent! Message ID: 0107017d04c997f0-ca7d03ef-8fab-4daf-a121-ed0df96bb952-000000.
+2021-11-09 14:02:00,472 - log_watcher - INFO - Email sent! Message ID: 0107017d04ca829b-d652a5ae-28ca-47ed-ab0e-66eb80bcf098-000000.
+2021-11-09 14:03:41,925 - log_watcher - INFO - Email sent! Message ID: 0107017d04cc0ecf-f5851cb5-7543-478a-a0de-62beb0349fe8-000000.
+2021-11-09 14:04:00,038 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:05:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:05:09,296 - log_watcher - INFO - Email sent! Message ID: 0107017d04cd6436-aa27c417-da68-4eba-bb32-f611bec0d5dc-000000.
+2021-11-09 14:06:00,391 - log_watcher - INFO - Email sent! Message ID: 0107017d04ce2bb8-70bfa94d-56e7-4295-8ac8-8acdaf0b456e-000000.
+2021-11-09 14:07:00,439 - log_watcher - INFO - Email sent! Message ID: 0107017d04cf1646-2bca3999-ae32-4efa-bea9-3652e1b1541a-000000.
+2021-11-09 14:08:00,376 - log_watcher - INFO - Email sent! Message ID: 0107017d04d00081-a6ee906f-15dc-4d0b-a3e8-f0e4bc351e6f-000000.
+2021-11-09 14:21:47,300 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:22:00,030 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:23:00,029 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:24:00,044 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:25:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:26:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:27:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:28:00,084 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:29:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:30:00,036 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:31:00,025 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:32:00,034 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:33:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:34:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:35:00,052 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:36:00,061 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:37:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:38:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:39:00,034 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:40:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:41:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:42:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:43:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:44:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:45:00,028 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:46:00,037 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:47:00,082 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:48:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:49:00,029 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:50:00,063 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:51:00,025 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:52:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:53:00,050 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:54:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:55:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:56:00,045 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:57:00,083 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:58:00,066 - log_watcher - INFO - Everything is fine.
+2021-11-09 14:59:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:00:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:01:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:02:00,049 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:03:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:04:00,074 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:05:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:06:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:07:00,031 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:08:00,081 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:09:00,494 - log_watcher - INFO - Email sent! Message ID: 0107017d0507d9e2-98e3c6e9-7b31-4f83-9a1f-fa81bbad90b8-000000.
+2021-11-09 15:10:00,376 - log_watcher - INFO - Email sent! Message ID: 0107017d0508c3d0-07ae8d57-4303-40f0-a467-19a00f26bd58-000000.
+2021-11-09 15:14:47,891 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:15:00,032 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:16:00,080 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:17:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:18:00,076 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:19:00,074 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:20:00,053 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:21:00,061 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:22:00,039 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:23:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:24:00,036 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:25:00,027 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:26:00,067 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:27:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:28:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:29:00,021 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:30:00,050 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:31:00,078 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:32:00,025 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:33:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:34:00,027 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:35:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:35:44,349 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:36:00,034 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:37:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:38:00,552 - log_watcher - INFO - Email sent! Message ID: 0107017d052266d7-c22e059f-35de-490e-b0c5-2d0e8e49bf1c-000000.
+2021-11-09 15:39:05,454 - log_watcher - INFO - Email sent! Message ID: 0107017d05236463-966df7e4-9539-49c5-8504-eb184f72fa66-000000.
+2021-11-09 15:40:00,382 - log_watcher - INFO - Email sent! Message ID: 0107017d05243b16-f5b3be20-7319-4223-ae6a-3c3b643d7083-000000.
+2021-11-09 15:41:00,418 - log_watcher - INFO - Email sent! Message ID: 0107017d05252598-4a3a0049-db00-4df1-ac52-ffec818746ac-000000.
+2021-11-09 15:42:00,476 - log_watcher - INFO - Email sent! Message ID: 0107017d05261004-3c8c7f21-9392-4e7f-80ed-08be6296a500-000000.
+2021-11-09 15:43:28,570 - log_watcher - INFO - Email sent! Message ID: 0107017d05276842-2db9f8d7-7583-4810-af24-b85ba324cdf6-000000.
+2021-11-09 15:43:50,241 - log_watcher - INFO - Email sent! Message ID: 0107017d0527bcd7-30532d07-95b3-44a9-b847-e72d849b46c0-000000.
+2021-11-09 15:44:00,203 - log_watcher - INFO - Email sent! Message ID: 0107017d0527e3c0-da8e749a-deb5-473e-898a-228b974f452e-000000.
+2021-11-09 15:45:00,036 - log_watcher - WARNING - Will not send the email (too many per hour).
+2021-11-09 15:45:38,082 - log_watcher - INFO - Email sent! Message ID: 0107017d0529620b-a53ef9f1-347d-4645-b207-7d6e69fae94c-000000.
+2021-11-09 15:46:00,022 - log_watcher - WARNING - Will not send the email (too many per hour).
+2021-11-09 15:47:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:48:00,056 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:49:00,039 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:50:00,074 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:51:00,075 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:55:41,838 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:56:00,032 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:57:00,079 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:58:00,077 - log_watcher - INFO - Everything is fine.
+2021-11-09 15:59:00,083 - log_watcher - INFO - Everything is fine.
