@@ -1,12 +1,11 @@
 import re
-import logging
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
 class SoupWgets:
     @staticmethod
-    def andorra(soup, browser=None):
+    def andorra(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -18,7 +17,7 @@ class SoupWgets:
         return tags[0].parent, int(tags[0].contents[2])
 
     @staticmethod
-    def armenia(soup, browser=None):
+    def armenia(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -33,7 +32,7 @@ class SoupWgets:
         return tag, int(cases)
 
     @staticmethod
-    def azerbaijan(soup, browser=None):
+    def azerbaijan(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -45,7 +44,7 @@ class SoupWgets:
                int(tags[0].find_previous_sibling('strong').contents[0])
 
     @staticmethod
-    def belarus(soup, browser=None):
+    def belarus(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -58,7 +57,7 @@ class SoupWgets:
                    "div").contents[0].contents[0].replace(' ', ''))
 
     @staticmethod
-    def gibraltar(soup, browser=None):
+    def gibraltar(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -69,7 +68,7 @@ class SoupWgets:
         return tags[0].parent, int(tags[0].contents[0][17:])
 
     @staticmethod
-    def kyrgyzstan(soup, browser=None):
+    def kyrgyzstan(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -86,7 +85,7 @@ class SoupWgets:
         return tag.tbody, cases
 
     @staticmethod
-    def luxembourg(soup, browser=None):
+    def luxembourg(soup):
         def condition(tag):
             return tag.name == 'article' and \
                    'card' in tag.get('class', []) and \
@@ -95,7 +94,7 @@ class SoupWgets:
         return tag.div.h4.contents[0], None
 
     @staticmethod
-    def north_macedonia(soup, browser=None):
+    def north_macedonia(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -106,7 +105,7 @@ class SoupWgets:
         return tags[0].parent.parent.parent.parent.parent, None
 
     @staticmethod
-    def russia(soup, browser=None):
+    def russia(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -121,7 +120,7 @@ class SoupWgets:
                ).contents[0].contents[0].replace(' ', ''))
 
     @staticmethod
-    def ukraine(soup, browser=None):
+    def ukraine(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -134,7 +133,7 @@ class SoupWgets:
                    ).contents[0].strip().replace(' ', ''))
 
     @staticmethod
-    def uzbekistan(soup, browser=None):
+    def uzbekistan(soup):
         def condition(tag):
             if tag is None:
                 return False

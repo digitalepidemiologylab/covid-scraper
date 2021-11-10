@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from selenium.common.exceptions import TimeoutException
 
 from helpers import wait_until_xpath
+from constants import LOGGER_BACKUP_COUNT
 
 # Create logger
 logger = logging.getLogger('soup_posts')
@@ -15,7 +16,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 printout_handler = logging.StreamHandler()
 writetofile_handler = RotatingFileHandler(
     'logs/log_posts.txt', mode='a', maxBytes=5*1024*1024, 
-    backupCount=2, encoding=None, delay=0)
+    backupCount=LOGGER_BACKUP_COUNT, encoding=None, delay=0)
 
 printout_handler.setLevel(logging.INFO)
 printout_handler.setFormatter(formatter)
@@ -47,14 +48,11 @@ class SoupPosts:
                    'personnes guéries s’élève' in tag.contents[0]
         tag = soup.find(condition)
         url = 'https://www.gouv.mc' + tag['href']
-        try:
-            wait_until_xpath(
-                cls.browser,
-                url,
-                "//*[contains(text(), 'personnes guéries s’élève')]",
-                logger)
-        except TimeoutException:
-            logger.warning("The link '%s' has not loaded.", url)
+        timed_out = wait_until_xpath(
+            cls.browser, url,
+            "//*[contains(text(), 'personnes guéries s’élève')]",
+            logger)
+        if timed_out:
             return tag, None
         post_source = cls.browser.page_source
         post_soup = BeautifulSoup(post_source, 'html.parser')
@@ -84,16 +82,13 @@ class SoupPosts:
                    'di ieri è di' in tag.contents[0]
         tag = soup.find(condition)
         url = 'https://www.iss.sm' + tag['href']
-        try:
-            wait_until_xpath(
-                cls.browser,
-                url,
-                "//*[contains(text(), 'Il numero totale di persone "
-                "contagiate individuate dall’inizio della pandemia "
-                "fino alla mezzanotte di ieri è di')]",
-                logger)
-        except TimeoutException:
-            logger.warning("The link '%s' has not loaded.", url)
+        timed_out = wait_until_xpath(
+            cls.browser, url,
+            "//*[contains(text(), 'Il numero totale di persone "
+            "contagiate individuate dall’inizio della pandemia "
+            "fino alla mezzanotte di ieri è di')]",
+            logger)
+        if timed_out:
             return tag, None
         post_source = cls.browser.page_source
         post_soup = BeautifulSoup(post_source, 'html.parser')

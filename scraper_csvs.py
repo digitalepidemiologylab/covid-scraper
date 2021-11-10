@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import time
 
-from constants import WEBSITES, CSVS
+from constants import WEBSITES, CSVS, LOGGER_BACKUP_COUNT
 from helpers import remove_latest_if_csv_unchanged
 from pandas_csvs import Csv
 
@@ -17,7 +17,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 printout_handler = logging.StreamHandler()
 writetofile_handler = RotatingFileHandler(
     'logs/log_csvs.txt', mode='a', maxBytes=5*1024*1024, 
-    backupCount=2, encoding=None, delay=0)
+    backupCount=LOGGER_BACKUP_COUNT, encoding=None, delay=0)
 
 printout_handler.setLevel(logging.INFO)
 printout_handler.setFormatter(formatter)

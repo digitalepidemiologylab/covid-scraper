@@ -10,7 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import TimeoutException
 
-from constants import WEBSITES, SELENIUM_DOWNLOADS, XPATHS
+from constants import WEBSITES, SELENIUM_DOWNLOADS, XPATHS, LOGGER_BACKUP_COUNT
 from helpers import remove_latest_if_page_unchanged, wait_until_xpath
 from soup_selenium import SoupSelenium
 
@@ -22,7 +22,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 printout_handler = logging.StreamHandler()
 writetofile_handler = RotatingFileHandler(
     'logs/log_selenium.txt', mode='a', maxBytes=5*1024*1024, 
-    backupCount=2, encoding=None, delay=0)
+    backupCount=LOGGER_BACKUP_COUNT, encoding=None, delay=0)
 
 printout_handler.setLevel(logging.INFO)
 printout_handler.setFormatter(formatter)

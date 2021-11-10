@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import time
 
-from constants import WEBSITES, WGET_DOWNLOADS
+from constants import WEBSITES, WGET_DOWNLOADS, LOGGER_BACKUP_COUNT
 from helpers import remove_latest_if_page_unchanged
 from soup_wgets import SoupWgets
 
@@ -17,7 +17,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 printout_handler = logging.StreamHandler()
 writetofile_handler = RotatingFileHandler(
     'logs/log_wgets.txt', mode='a', maxBytes=5*1024*1024, 
-    backupCount=2, encoding=None, delay=0)
+    backupCount=LOGGER_BACKUP_COUNT, encoding=None, delay=0)
 
 printout_handler.setLevel(logging.INFO)
 printout_handler.setFormatter(formatter)

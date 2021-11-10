@@ -57,3 +57,5 @@ XPATHS = {
     'Poland': "//strong[contains(text(),'osoby zakażone od 4 marca 2020')]",
     'Romania': "//*[@style='fill: rgb(230, 0, 0); stroke-width: 2px; font-size: 160px; line-height: normal;']"
 }
+
+LOGGER_BACKUP_COUNT = 5
