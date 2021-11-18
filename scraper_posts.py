@@ -53,13 +53,17 @@ if __name__ == '__main__':
                 p = f"data/{country.lower()}_{t}.html"
                 command = f'wget -4 -O "{p}" -U "{user}" --connect-timeout=1 --read-timeout=10 --limit-rate=500K -e robots=off "{url}"'
                 os.system(command)
-                if os.stat(p).st_size == 0:
-                    os.remove(p)
-                ps = sorted([p.name for p in Path('.').iterdir() if p.name.startswith(country.lower())])
+                try:
+                    if os.stat(p).st_size == 0:
+                        os.remove(p)
+                except FileNotFoundError as exc:
+                    logger.warning('%s: %s', type(exc).__name__, str(exc))
+                    continue
+                ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
                 if len(ps) in [0, 1]:
                     continue
                 if ps[-1] != p:
-                    logger.error('File "%s" has not been saved.', p)
+                    logger.error("File '%s' has not been saved.", p)
                     continue
                 remove_latest_if_page_unchanged(*ps[-2:], country, t, SoupPosts, logger)
             full_cycle = time.time() - start_time

@@ -1,3 +1,4 @@
 data/
+logs/old/
 geckodriver.log
 __pycache__/

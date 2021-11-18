@@ -1,3 +1,5 @@
+from string import digits
+
 class SoupSelenium:
     @staticmethod
     def israel(soup):
@@ -27,8 +29,8 @@ class SoupSelenium:
             return tag.name == 'h5' and \
                    len(tag.contents) == 1 and \
                    'Raste' in tag.contents[0]
-        tag = soup.find(condition)
-        return tag.parent, int(tag.parent.h3.contents[0].replace(',', ''))
+        tags = soup.find_all(condition)
+        return tags[1].parent, int(tags[1].parent.h3.contents[0].replace(',', ''))
 
     @staticmethod
     def latvia(soup):
@@ -42,6 +44,7 @@ class SoupSelenium:
         number = tag.parent.find_next_sibling().find(
             lambda tag: tag.name == 'strong'
         ).contents[0].replace(' ', '')
+        number = ''.join(c for c in number if c in digits)
         return tag.parent.parent, int(number)
 
     @staticmethod

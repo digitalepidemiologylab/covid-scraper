@@ -1,0 +1,1050 @@
+2021-11-16 10:12:47,723 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-16 10:12:49,141 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-16 10:12:50,406 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-16 10:12:51,132 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-16 10:13:14,958 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-16 10:13:16,469 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-16 10:13:20,355 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-16 10:13:31,992 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 19, in israel
+    tag_outer = tag_outer.parent.parent.parent.parent
+
+2021-11-16 10:13:33,499 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 19, in israel
+    tag_outer = tag_outer.parent.parent.parent.parent
+
+2021-11-16 10:13:40,065 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 44, in latvia
+    number = tag.parent.find_next_sibling().find(
+
+2021-11-16 10:13:41,415 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,489 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,611 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,705 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,781 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,893 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:41,968 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,053 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,112 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,184 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,344 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,419 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,496 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,623 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,729 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,897 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:42,987 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,109 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,191 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,283 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,348 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,430 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,490 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,581 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,688 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,773 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,819 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:43,907 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,083 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,186 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,308 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,434 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,532 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,640 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,725 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,863 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:44,948 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,020 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,127 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,245 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,344 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,538 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,622 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,721 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:45,884 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,016 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,119 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,204 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,333 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,450 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,520 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,615 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,725 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,810 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:46,896 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,208 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,421 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,513 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,587 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,692 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,777 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,863 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:47,977 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,035 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,168 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,295 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,409 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,546 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,588 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,673 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,779 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,841 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:48,949 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,019 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,137 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,207 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,293 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,355 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,469 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,579 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,643 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,736 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:49,823 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'div'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 77, in montenegro
+    return tag, int(tag.find(condition_number).div.contents[0])
+
+2021-11-16 10:13:50,436 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 86, in poland
+    tag = tag.parent.parent.parent
+
+2021-11-16 10:13:50,690 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 86, in poland
+    tag = tag.parent.parent.parent
+
+2021-11-16 10:13:50,732 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 86, in poland
+    tag = tag.parent.parent.parent
+
+2021-11-16 10:13:50,766 - generate_numbers - ERROR - AttributeError: 'NoneType' object has no attribute 'parent'
+Traceback:
+  File "/drives/sdc/olesia/covid-scraping/helpers.py", line 232, in send_to_numbers_html
+    soup, num = getattr(Soup, country.lower())(soup)
+
+  File "/drives/sdc/olesia/covid-scraping/soup_selenium.py", line 86, in poland
+    tag = tag.parent.parent.parent
+
+2021-11-16 10:22:24,434 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-16 10:22:25,401 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-16 10:22:26,416 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-16 10:22:27,075 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-16 10:22:49,247 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-16 10:22:50,781 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-16 10:22:54,729 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-16 10:23:05,998 - generate_numbers - ERROR - 'data/israel_2021-11-09_04-24-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:07,433 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:13,626 - generate_numbers - ERROR - 'data/latvia_2021-11-07_12-30-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:14,775 - generate_numbers - ERROR - 'data/montenegro_2021-11-01_20-46-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:14,850 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_09-13-52.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:14,961 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_10-55-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,040 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_11-38-32.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,104 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_15-00-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,195 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_20-58-31.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,269 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_21-23-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,342 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_22-06-37.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,402 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_23-13-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,476 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_14-17-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,569 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-13-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,644 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-52-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,711 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_00-21-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,810 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_06-05-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,884 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_08-10-06.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:15,986 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_16-58-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,064 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_17-53-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,142 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_18-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,217 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-41-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,294 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-53-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,359 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-57-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,441 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_20-37-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,503 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_21-48-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,578 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-03-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,690 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,765 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-56-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,812 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_03-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:16,890 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_09-15-42.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,006 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_15-56-44.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,065 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_18-04-45.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,139 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_23-25-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,198 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_07-30-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,271 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_08-49-46.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,349 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_10-58-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,422 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_11-15-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,527 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_12-38-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,601 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_14-48-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,664 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-09-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,743 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-19-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,816 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_16-50-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:17,899 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_17-10-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,057 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-21-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,122 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-41-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,196 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-11-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,271 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-22-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,382 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-13-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,456 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-32-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,530 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_23-25-03.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,605 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-07-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,679 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-51-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,739 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_10-06-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,823 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-26-12.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,901 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-52-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:18,961 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_13-50-07.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,034 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_15-05-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,166 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_17-46-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,245 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-02-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,309 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-52-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,372 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-57-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,451 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-02-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,524 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-08-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,582 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-18-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,655 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-28-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,692 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-29-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,754 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-18-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,826 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-28-22.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:19,904 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_21-04-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,007 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-34-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,043 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-35-23.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,117 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-00-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,195 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-26-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,249 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_01-12-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,327 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-01-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,388 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-18-24.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,461 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_05-46-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,522 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_09-48-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,596 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-31-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,656 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-51-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,756 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_15-41-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,856 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_18-33-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,920 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_23-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:20,972 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-39-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:21,046 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-43-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-16 10:23:21,594 - generate_numbers - ERROR - 'data/poland_2021-11-07_01-35-52.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:21,750 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-05-21.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:21,778 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-07-32.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-16 10:23:21,805 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-09-26.html' AttributeError: 'NoneType' object has no attribute 'parent'2021-11-17 16:03:43,468 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-17 16:03:44,767 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-17 16:03:46,081 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-17 16:03:47,136 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-17 16:04:12,221 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-17 16:04:13,719 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-17 16:04:17,663 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-17 16:04:31,104 - generate_numbers - ERROR - 'data/israel_2021-11-09_04-24-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:32,599 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:40,636 - generate_numbers - ERROR - 'data/latvia_2021-11-07_12-30-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:42,342 - generate_numbers - ERROR - 'data/montenegro_2021-11-01_20-46-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,431 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_09-13-52.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,569 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_10-55-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,671 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_11-38-32.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,758 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_15-00-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,903 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_20-58-31.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:42,990 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_21-23-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,081 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_22-06-37.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,151 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_23-13-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,237 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_14-17-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,349 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-13-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,436 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-52-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,522 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_00-21-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,623 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_06-05-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,722 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_08-10-06.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:43,905 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_16-58-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,056 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_17-53-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,172 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_18-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,257 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-41-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,361 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-53-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,435 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-57-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,528 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_20-37-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,597 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_21-48-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,728 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-03-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,822 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,916 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-56-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:44,970 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_03-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,135 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_09-15-42.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,292 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_15-56-44.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,397 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_18-04-45.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,500 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_23-25-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,593 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_07-30-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,685 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_08-49-46.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,824 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_10-58-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:45,914 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_11-15-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,009 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_12-38-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,092 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_14-48-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,163 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-09-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,302 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-19-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,412 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_16-50-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,533 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_17-10-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,750 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-21-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,848 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-41-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:46,938 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-11-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,027 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-22-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,105 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-13-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,232 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-32-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,317 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_23-25-03.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,445 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-07-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,541 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-51-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,657 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_10-06-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,760 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-26-12.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,853 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-52-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:47,929 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_13-50-07.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,017 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_15-05-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,170 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_17-46-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,282 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-02-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,394 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-52-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,476 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-57-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,608 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-02-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,691 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-08-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,767 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-18-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,859 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-28-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,909 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-29-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:48,997 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-18-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,083 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-28-22.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,169 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_21-04-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,289 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-34-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,328 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-35-23.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,408 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-00-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,502 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-26-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,591 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_01-12-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,683 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-01-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,749 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-18-24.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,832 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_05-46-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,890 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_09-48-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:49,961 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-31-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,018 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-51-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,114 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_15-41-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,190 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_18-33-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,252 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_23-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,312 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-39-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:50,382 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-43-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 16:04:51,139 - generate_numbers - ERROR - 'data/poland_2021-11-07_01-35-52.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:51,308 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-05-21.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:51,333 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-07-32.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:04:51,358 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-09-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 16:45:06,003 - generate_numbers - WARNING - The structure of the file "data/andorra_2021-11-17_16-45-00.html" have changed. Check the source.
+2021-11-17 16:45:07,838 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-17 16:45:09,009 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-17 16:45:10,297 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-17 16:45:11,415 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-17 16:45:37,459 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-17 16:45:39,035 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-17 16:45:43,094 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-17 16:59:08,494 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-17 16:59:09,599 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-17 16:59:10,966 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-17 16:59:11,913 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-17 16:59:36,232 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-17 16:59:37,787 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-17 16:59:41,751 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-17 17:01:28,164 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-17 17:01:29,258 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-17 17:01:30,381 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-17 17:01:56,201 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-18_14-28-56.html" have changed. Check the source.
+2021-11-17 17:01:57,198 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-10-31_19-15-53.html" have changed. Check the source.
+2021-11-17 17:01:58,278 - generate_numbers - WARNING - The structure of the file "data/belarus_2021-11-12_22-30-01.html" have changed. Check the source.
+2021-11-17 17:01:59,136 - generate_numbers - WARNING - The structure of the file "data/gibraltar_2021-10-19_00-56-27.html" have changed. Check the source.
+2021-11-17 17:02:22,687 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-05_20-03-08.html" have changed. Check the source.
+2021-11-17 17:02:24,264 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-10_13-39-06.html" have changed. Check the source.
+2021-11-17 17:02:28,354 - generate_numbers - WARNING - The structure of the file "data/russia_2021-11-13_10-17-07.html" have changed. Check the source.
+2021-11-17 17:02:41,827 - generate_numbers - ERROR - 'data/israel_2021-11-09_04-24-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:02:43,635 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:02:51,198 - generate_numbers - ERROR - 'data/latvia_2021-11-07_12-30-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:02:52,802 - generate_numbers - ERROR - 'data/montenegro_2021-11-01_20-46-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:52,887 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_09-13-52.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,034 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_10-55-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,172 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_11-38-32.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,260 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_15-00-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,413 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_20-58-31.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,542 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_21-23-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,644 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_22-06-37.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,712 - generate_numbers - ERROR - 'data/montenegro_2021-11-02_23-13-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,797 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_14-17-35.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:53,920 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-13-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,005 - generate_numbers - ERROR - 'data/montenegro_2021-11-03_17-52-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,113 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_00-21-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,243 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_06-05-33.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,351 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_08-10-06.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,568 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_16-58-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,700 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_17-53-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,842 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_18-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:54,927 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-41-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,030 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-53-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,104 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_19-57-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,199 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_20-37-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,270 - generate_numbers - ERROR - 'data/montenegro_2021-11-04_21-48-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,401 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-03-30.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,520 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,650 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_00-56-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,723 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_03-15-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:55,860 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_09-15-42.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,072 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_15-56-44.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,165 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_18-04-45.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,276 - generate_numbers - ERROR - 'data/montenegro_2021-11-05_23-25-00.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,351 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_07-30-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,427 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_08-49-46.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,528 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_10-58-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,604 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_11-15-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,707 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_12-38-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,796 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_14-48-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,871 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-09-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:56,978 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_15-19-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,103 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_16-50-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,202 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_17-10-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,439 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-21-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,564 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_18-41-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,681 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-11-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,825 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_19-22-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:57,942 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-13-36.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,071 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_20-32-38.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,173 - generate_numbers - ERROR - 'data/montenegro_2021-11-06_23-25-03.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,272 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-07-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,488 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_04-51-59.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,571 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_10-06-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,662 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-26-12.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,765 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_12-52-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,850 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_13-50-07.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:58,939 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_15-05-34.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,131 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_17-46-13.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,265 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-02-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,354 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-52-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,428 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_18-57-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,535 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-02-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,684 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-08-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,813 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-18-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:02:59,944 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-28-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,015 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_19-29-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,114 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-18-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,202 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_20-28-22.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,321 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_21-04-29.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,489 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-34-28.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,533 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_22-35-23.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,627 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-00-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,738 - generate_numbers - ERROR - 'data/montenegro_2021-11-07_23-26-17.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,812 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_01-12-21.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:00,987 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-01-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,065 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_03-18-24.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,206 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_05-46-18.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,281 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_09-48-25.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,369 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-31-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,439 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_13-51-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,649 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_15-41-15.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,778 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_18-33-16.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:01,881 - generate_numbers - ERROR - 'data/montenegro_2021-11-08_23-15-19.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:02,013 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-39-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:02,130 - generate_numbers - ERROR - 'data/montenegro_2021-11-09_02-43-27.html' AttributeError: 'NoneType' object has no attribute 'div'
+2021-11-17 17:03:03,141 - generate_numbers - ERROR - 'data/poland_2021-11-07_01-35-52.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:03:03,341 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-05-21.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:03:03,373 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-07-32.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 17:03:03,437 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-09-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:35,087 - generate_numbers - ERROR - 'data/israel_2021-11-09_04-24-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:36,576 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:44,587 - generate_numbers - ERROR - 'data/latvia_2021-11-07_12-30-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:47,663 - generate_numbers - ERROR - 'data/poland_2021-11-07_01-35-52.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:47,829 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-05-21.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:47,854 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-07-32.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:37:47,880 - generate_numbers - ERROR - 'data/poland_2021-11-10_16-09-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:58:21,983 - generate_numbers - ERROR - 'data/israel_2021-11-09_04-24-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:58:23,738 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-17 18:58:31,722 - generate_numbers - ERROR - 'data/latvia_2021-11-07_12-30-26.html' AttributeError: 'NoneType' object has no attribute 'parent'
+2021-11-18 21:31:15,406 - generate_numbers - WARNING - The structure of the file 'data/belarus_2021-11-12_22-30-01.html' has changed. Check the source.
+2021-11-18 21:31:16,849 - generate_numbers - ERROR - 'data/kyrgyzstan_2021-11-18_21-31-03.html' AttributeError: 'NoneType' object has no attribute 'find_next_sibling'
+2021-11-18 21:31:22,344 - generate_numbers - WARNING - The structure of the file 'data/russia_2021-11-10_13-39-06.html' has changed. Check the source.
+2021-11-18 21:31:26,295 - generate_numbers - WARNING - The structure of the file 'data/russia_2021-11-13_10-17-07.html' has changed. Check the source.
+2021-11-18 21:31:32,031 - generate_numbers - ERROR - 'data/israel_2021-11-10_08-47-00.html' AttributeError: 'NoneType' object has no attribute 'parent'

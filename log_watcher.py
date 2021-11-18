@@ -15,12 +15,9 @@ LOG_FILES = ['log_wgets.txt', 'log_selenium.txt', 'log_posts.txt', 'log_csvs.txt
 SENDER = "Crowdbreaks <info@crowdbreaks.org>"
 RECIPIENT = "olesia.altunina@epfl.ch"
 AWS_REGION = "eu-central-1"
-SUBJECT = "[COVID-19 Scraper] Error or Missing logs"
+SUBJECT_PREFIX = "[COVID-19 Scraper] "
 
 body_text_lag = lambda f_name: f"Recent logs could not be found for '{f_name}'.\n"
-body_text_error = lambda f_name, errors: \
-    f"The following errors have been found in '{f_name}':\n" \
-    '\n'.join(errors)
 
 CHARSET = "UTF-8"
 
@@ -28,6 +25,7 @@ client = boto3.client('ses', region_name=AWS_REGION)
 
 MAX_PER_PERIOD = 2  # Max emails per period
 PERIOD = 3600  # Period of silence in seconds
+OLD_BUFFER = 20  # How many old messages to keep for comparison
 
 # Create logger
 logger = logging.getLogger('log_watcher')
@@ -48,7 +46,7 @@ logger.addHandler(printout_handler)
 logger.addHandler(writetofile_handler)
 
 
-def send_email(messages):
+def send_email(messages, subject):
     return client.send_email(
         Destination={
             'ToAddresses': [
@@ -63,12 +61,12 @@ def send_email(messages):
                 },
                 'Html': {
                     'Charset': CHARSET,
-                    'Data': '\n'.join(messages),
+                    'Data': '<br>'.join(messages),
                 }
             },
             'Subject': {
                 'Charset': CHARSET,
-                'Data': SUBJECT,
+                'Data': SUBJECT_PREFIX + subject,
             },
         },
         Source=SENDER,
@@ -78,17 +76,19 @@ def send_email(messages):
 if __name__ == '__main__':
     sent_emails = []
     not_saved = []
+    messages_old = []
     start_not_saved = datetime.now()
     while True:
         if len(not_saved) > 0 and \
                 (datetime.now() - start_not_saved).seconds > PERIOD:
             try:
-                response = send_email(messages)
+                response = send_email(list(dict.fromkeys(not_saved)), 'Files Not Saved')
             except ClientError as e:
                 logger.error(e.response['Error']['Message'])
             else:
                 logger.info('Aggregated email sent! Message ID: %s.', response['MessageId'])
                 start_not_saved = datetime.now()
+                not_saved = []
         if len(sent_emails) > 0 and \
                 (datetime.now() - max(sent_emails)).seconds > PERIOD:
             sent_emails = []
@@ -105,22 +105,26 @@ if __name__ == '__main__':
                 if t.strftime('%Y-%m-%d %H:%M') in line or t_1.strftime('%Y-%m-%d %H:%M') in line:
                     datetime_in_log = True
                 if 'ERROR' in line:
-                    if not 'has not been saved' in line:
+                    if 'has not been saved' in line:
+                        not_saved.append(line)
+                    else:
                         has_errors = True
                         errors.append(line)
-                    else:
-                        not_saved.append(line)
-            message = ''
+            message = []
             if not datetime_in_log:
-                message += body_text_lag(f_name)
+                message.append(body_text_lag(f_name))
             if has_errors:
-                message += body_text_error(f_name, errors)
+                message.extend(errors)
             if len(message) > 0:
-                messages.append(message)
+                messages.extend(message)
+        messages = [message for message in messages if message not in messages_old]
         if len(messages) > 0:
             if len(sent_emails) < MAX_PER_PERIOD:
                 try:
-                    response = send_email(messages)
+                    response = send_email(messages, 'Errors or Missing logs')
+                    messages_old.extend(messages)
+                    if len(messages_old) > OLD_BUFFER:
+                        messages_old = messages_old[-OLD_BUFFER:]
                 except ClientError as e:
                     logger.error(e.response['Error']['Message'])
                 else:

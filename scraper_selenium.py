@@ -60,11 +60,11 @@ if __name__ == '__main__':
                     f.write(source)
                 if os.stat(p).st_size == 0:
                     os.remove(p)
-                ps = sorted([p.name for p in Path('.').iterdir() if p.name.startswith(country.lower())])
+                ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
                 if len(ps) in [0, 1]:
                     continue
                 if ps[-1] != p:
-                    logger.error('File "%s" has not been saved.', p)
+                    logger.error("File '%s' has not been saved.", p)
                     continue
                 remove_latest_if_page_unchanged(*ps[-2:], country, t, SoupSelenium, logger)
             full_cycle = time.time() - start_time
