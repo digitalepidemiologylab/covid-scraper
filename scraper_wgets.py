@@ -37,6 +37,7 @@ if __name__ == '__main__':
         start_time = time.time()
         wget_websites = {
             k: v for k, v in WEBSITES.items() if k in WGET_DOWNLOADS}
+        logger.info(wget_websites.keys())
         for country, url in wget_websites.items():
             t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
             p = f"data/{country.lower()}_{t}.html"
@@ -49,10 +50,10 @@ if __name__ == '__main__':
                 # TODO: Do retry wget
                 logger.warning('%s: %s', type(exc).__name__, str(exc))
                 continue
-            ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
+            ps = sorted([p for p in Path('data').iterdir() if p.name.startswith(country.lower())])
             if len(ps) in [0, 1]:
                 continue
-            if ps[-1] != p:
+            if str(ps[-1]) != str(p):
                 logger.error("File '%s' has not been saved.", p)
                 continue
             remove_latest_if_page_unchanged(*ps[-2:], country, t, SoupWgets, logger)

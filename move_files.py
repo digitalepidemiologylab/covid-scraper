@@ -14,7 +14,7 @@ if __name__ == '__main__':
             p.name
             for p in Path('data').iterdir()
             if p.name.startswith(f'{country.lower()}_') and
-            Filename(p.name).in_between(datetime_min, datetime_max)])
+            Filename(p).in_between(datetime_min, datetime_max)])
         try:
             os.mkdir(f'data/{country.lower()}')
         except FileExistsError:

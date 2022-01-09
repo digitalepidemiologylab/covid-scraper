@@ -59,16 +59,21 @@ if __name__ == '__main__':
                 except FileNotFoundError as exc:
                     logger.warning('%s: %s', type(exc).__name__, str(exc))
                     continue
-                ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
+                ps = sorted([p for p in Path('data').iterdir() if p.name.startswith(country.lower())])
                 if len(ps) in [0, 1]:
                     continue
-                if ps[-1] != p:
+                if str(ps[-1]) != str(p):
                     logger.error("File '%s' has not been saved.", p)
                     continue
                 remove_latest_if_page_unchanged(*ps[-2:], country, t, SoupPosts, logger)
             full_cycle = time.time() - start_time
             logger.info('CYCLE COMPLETE: %d s', time.time() - start_time)
             # break
+            if full_cycle > 45:
+                browser.close()
+                browser = webdriver.Firefox(options=options)
+                SoupPosts.set_browser(browser)
+                logger.info('Browser reloaded')
             t = datetime.utcnow()
             sleeptime = 60 - (t.second + t.microsecond/1000000.0)
             time.sleep(sleeptime)

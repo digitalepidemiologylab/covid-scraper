@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 import time
 
-from constants import WEBSITES, WGET_DOWNLOADS, SELENIUM_DOWNLOADS, POSTS, CSVS, LOGGER_BACKUP_COUNT
+from constants import WEBSITES, WGET_DOWNLOADS, SELENIUM_DOWNLOADS, POSTS, CSVS, LOGGER_BACKUP_COUNT, GENERATED_NUMBERS_PATH
 from helpers import send_to_numbers_csv, send_to_numbers_html
 from pandas_csvs import Csv
 from soup_posts import SoupPosts
@@ -54,17 +54,26 @@ parser.add_argument('--later', type=str, default=None,
 def get_paths(country, later=None):
     ps = sorted([
         p for p in Path('data').iterdir()
-        if p.name.startswith(f'{country.lower()}_')
+        if p.name.startswith(f'{country.lower()}_') and
+        p.name.split('.')[-1] == 'html'
     ])
-    for p in ps:
-        if Filename(p.name).later_than(later):
-            return [str(pp) for pp in ps[ps.index(p):]]
-    return []
+    if later is not None:
+        for p in ps:
+            if Filename(p).later_than(later):
+                return ps[ps.index(p):]
+    return ps
 
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    later = datetime.strptime(args.later, '%Y-%m-%d_%H-%M-%S')
+    if args.later is None:
+        later = args.later
+    else:
+        later = datetime.strptime(args.later, '%Y-%m-%d_%H-%M-%S')
+
+    numbers_path = Path(GENERATED_NUMBERS_PATH)
+    with numbers_path.open('w') as f:
+        f.write('{}')
 
     wget_websites = [k for k in WEBSITES if k in WGET_DOWNLOADS]
     for country in wget_websites:

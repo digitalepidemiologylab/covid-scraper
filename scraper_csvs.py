@@ -38,7 +38,10 @@ if __name__ == '__main__':
             k: v for k, v in WEBSITES.items() if k in CSVS.keys()}
         for country, url in csvs_websites.items():
             t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-            p = f"data/{country.lower()}_{t}.csv"
+            if country.lower() != 'italy':
+                p = f"data/{country.lower()}_{t}.csv"
+            else:
+                p = f"data/{country.lower()}_{t}.json"
             command = f'wget -4 -O "{p}" -U "{user}" --connect-timeout=1 --read-timeout=10 -e robots=off "{url}"'
             os.system(command)
             try:
@@ -47,10 +50,10 @@ if __name__ == '__main__':
             except FileNotFoundError as exc:
                 logger.warning('%s: %s', type(exc).__name__, str(exc))
                 continue
-            ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
+            ps = sorted([p for p in Path('data').iterdir() if p.name.startswith(country.lower())])
             if len(ps) in [0, 1]:
                 continue
-            if ps[-1] != p:
+            if str(ps[-1]) != str(p):
                 logger.error("File '%s' has not been saved.", p)
                 continue
             remove_latest_if_csv_unchanged(*ps[-2:], country, CSVS[country], t, Csv, logger)

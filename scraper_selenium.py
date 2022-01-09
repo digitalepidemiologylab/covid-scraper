@@ -10,7 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import TimeoutException
 
-from constants import WEBSITES, SELENIUM_DOWNLOADS, XPATHS, LOGGER_BACKUP_COUNT
+from constants import SLEEPS, WEBSITES, SELENIUM_DOWNLOADS, XPATHS, LOGGER_BACKUP_COUNT
 from helpers import remove_latest_if_page_unchanged, wait_until_xpath
 from soup_selenium import SoupSelenium
 
@@ -51,7 +51,7 @@ if __name__ == '__main__':
                 t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
                 p = f"data/{country.lower()}_{t}.html"
                 errors = 0
-                continuee = wait_until_xpath(browser, url, XPATHS[country], logger, errors)
+                continuee = wait_until_xpath(browser, url, XPATHS[country], logger, errors, SLEEPS.get(country, 1))
                 if continuee:
                     continue
                 source = browser.page_source
@@ -60,10 +60,10 @@ if __name__ == '__main__':
                     f.write(source)
                 if os.stat(p).st_size == 0:
                     os.remove(p)
-                ps = sorted([os.path.join('data', p.name) for p in Path('data').iterdir() if p.name.startswith(country.lower())])
+                ps = sorted([p for p in Path('data').iterdir() if p.name.startswith(country.lower())])
                 if len(ps) in [0, 1]:
                     continue
-                if ps[-1] != p:
+                if str(ps[-1]) != str(p):
                     logger.error("File '%s' has not been saved.", p)
                     continue
                 remove_latest_if_page_unchanged(*ps[-2:], country, t, SoupSelenium, logger)

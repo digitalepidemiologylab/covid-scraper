@@ -13,15 +13,15 @@ import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.support.expected_conditions import _find_element
 
-from constants import POSTS, DELAY, NUM_RETRIES
+from constants import POSTS, DELAY, NUM_RETRIES, GENERATED_NUMBERS_PATH
 
 
 class Filename:
-    def __init__(self, f_name):
-        f_name, *_ = f_name.split('.')
+    def __init__(self, p):
+        f_name, *_ = p.name.split('.')
         self.name, date, time = f_name.split('_')[-3:]
         self.datetime = datetime(*[*[int(x) for x in date.split('-')], *[int(x) for x in time.split('-')]])
 
@@ -41,11 +41,19 @@ def compare_strings(soup_1, soup_2):
 
 
 def get_csv(p, sep):
-    return pd.read_csv(p, sep)
+    if p.name.endswith('.json'):
+        # with p.open('r') as f:
+            # print(json.load(f))
+            # print(f.read())
+        return pd.read_json(str(p), orient='records')
+    elif p.name.endswith('.csv'):
+        return pd.read_csv(str(p), sep)
+    else:
+        raise ValueError('The format should be CSV or JSON.')
 
 
 def get_soup(p):
-    with open(p, 'rb') as f:
+    with p.open('rb') as f:
         return BeautifulSoup(f.read(), 'html.parser')
 
 
@@ -97,10 +105,10 @@ def remove_latest_if_csv_unchanged(p_1, p_2, country, sep, t, Csv, logger):
         csv_2, num_2 = getattr(Csv, country.lower())(csv_2)
     except AssertionError:
         logger.warning("The structure of the file '%s' have changed. Check the source.", p_2)
-        os.rename(p_2, p_2 + '.processing_exception')
+        os.rename(str(p_2), os.path.join(p_2.parents[0], 'processing_exception', p_2.name))
     except Exception as exc:
         logger.error('%s: %s. Traceback: %s', type(exc).__name__, str(exc), '; '.join(traceback.format_tb(exc.__traceback__)))
-        os.rename(p_2, p_2 + '.processing_exception')
+        os.rename(p_2, os.path.join(p_2.parents[0], 'processing_exception', p_2.name))
     else:
         logger.debug('%s: %s %s', country, num_1, num_2)
         remove_if_needed(
@@ -121,10 +129,10 @@ def remove_latest_if_page_unchanged(p_1, p_2, country, t, Soup, logger):
         soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
     except AssertionError:
         logger.warning("The structure of the file '%s' has changed. Check the source.", p_2)
-        os.rename(p_2, p_2 + '.processing_exception')
+        os.rename(p_2, os.path.join(p_2.parents[0], 'processing_exception', p_2.name))
     except Exception as exc:
         logger.error('%s: %s. Traceback: %s', type(exc).__name__, str(exc), '; '.join(traceback.format_tb(exc.__traceback__)))
-        os.rename(p_2, p_2 + '.processing_exception')
+        os.rename(p_2, os.path.join(p_2.parents[0], 'processing_exception', p_2.name))
     else:
         logger.debug('%s: %s %s', country, num_1, num_2)
         remove_if_needed(
@@ -133,7 +141,7 @@ def remove_latest_if_page_unchanged(p_1, p_2, country, t, Soup, logger):
 
 
 # Fixing a mess
-def copy_if_needed(
+def copy_if_changed(
     p_2, country, arg_1, arg_2, num_1, num_2, logger
 ):
     copy = True
@@ -147,7 +155,10 @@ def copy_if_needed(
         elif compare_strings(arg_1, arg_2):
             copy = False
     if copy:
-        shutil.copyfile(p_2, f'data/{Path(p_2).name}')
+        name = Path(p_2).name
+        name = name if name.split('.')[-1] == 'html' else '.'.join(name.split('.')[:-1])
+        logger.info(f'NAME: data/{name}')
+        shutil.copyfile(p_2, f'data/{name}')
         logger.info("The file '%s' has changed. Keeping the new version.", p_2)
         numbers = {}
         with open('logs/numbers.json', 'rb') as f:
@@ -161,7 +172,7 @@ def copy_if_needed(
             json.dump(numbers, f)
 
 
-def copy_latest_if_csv_unchanged(p_1, p_2, country, sep, Csv, logger):
+def copy_latest_if_csv_changed(p_1, p_2, country, sep, Csv, logger):
     logger.info(p_2)
     csv_1, csv_2 = [get_csv(p, sep) for p in [p_1, p_2]]
     num_1 = None
@@ -175,12 +186,12 @@ def copy_latest_if_csv_unchanged(p_1, p_2, country, sep, Csv, logger):
         logger.error('%s: %s. Traceback: %s', type(exc).__name__, str(exc), '; '.join(traceback.format_tb(exc.__traceback__)))
     else:
         logger.debug('%s: %s %s', country, num_1, num_2)
-        copy_if_needed(
+        copy_if_changed(
             p_2, country, csv_1, csv_2, num_1, num_2, logger
         )
 
 
-def copy_latest_if_page_unchanged(p_1, p_2, country, Soup, logger):
+def copy_latest_if_page_changed(p_1, p_2, country, Soup, logger):
     logger.info(p_2)
     try:
         soup_1, soup_2 = [get_soup(p) for p in [p_1, p_2]]
@@ -198,7 +209,7 @@ def copy_latest_if_page_unchanged(p_1, p_2, country, Soup, logger):
         logger.error('%s: %s. Traceback: %s', type(exc).__name__, str(exc), '; '.join(traceback.format_tb(exc.__traceback__)))
     else:
         logger.debug('%s: %s %s', country, num_1, num_2)
-        copy_if_needed(
+        copy_if_changed(
             p_2, country, soup_1, soup_2, num_1, num_2, logger
         )
 
@@ -206,9 +217,9 @@ def copy_latest_if_page_unchanged(p_1, p_2, country, Soup, logger):
 # Send to numbers
 def send_to_numbers(p, country, num):
     numbers = {}
-    with open('logs/numbers_generated.json', 'rb') as f:
+    with open(GENERATED_NUMBERS_PATH, 'rb') as f:
         numbers = json.load(f)
-    with open('logs/numbers_generated.json', 'w') as f:
+    with open(GENERATED_NUMBERS_PATH, 'w') as f:
         t = Filename(p).datetime.strftime('%Y-%m-%d_%H-%M-%S')
         if not numbers.get(country):
             numbers[country] = {t: num}
@@ -247,7 +258,10 @@ def send_to_numbers_html(p, country, Soup, logger):
     else:
         logger.debug('%s: %s %s', country, num)
         if num is None:
-            send_to_numbers(p, country, md5(soup.encode()).hexdigest())
+            if soup is not None:
+                send_to_numbers(p, country, md5(soup.encode()).hexdigest())
+            else:
+                pass
         else:
             send_to_numbers(p, country, num)
 
@@ -265,7 +279,7 @@ def send_to_numbers_html(p, country, Soup, logger):
 #             return re.search(re.compile(self.regexp), element_text)
 
 
-def wait_until_xpath(browser, url, xpath, logger, errors=0):
+def wait_until_xpath(browser, url, xpath, logger, errors=0, sleep=1):
     try:
         browser.get(url)
         # WebDriverWait(browser, DELAY).until(text_match((By.XPATH, xpath), pattern))
@@ -275,13 +289,15 @@ def wait_until_xpath(browser, url, xpath, logger, errors=0):
                 xpath
             ))
         )
-        time.sleep(1)
+        time.sleep(sleep)
         return False
     except TimeoutException:
         errors += 1
-        logger.error("Request for '%s' timed out. Retrying.", url)
+        logger.warning("Request for '%s' timed out. Retrying.", url)
         if errors < NUM_RETRIES:
-            wait_until_xpath(browser, url, xpath, logger, errors)
+            wait_until_xpath(browser, url, xpath, logger, errors, sleep)
         else:
             logger.error("Info for '%s' could not be loaded.", url)
             return True
+    except Exception as exc:
+        logger.error("'%s' %s: %s", url, type(exc).__name__, str(exc))

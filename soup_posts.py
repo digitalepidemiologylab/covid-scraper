@@ -89,6 +89,9 @@ class SoupPosts:
             "fino alla mezzanotte di ieri è di')]",
             logger)
         if timed_out:
+            cls.browser.close()
+            cls.browser = webdriver.Firefox(options=options)
+            logger.info('SoupPosts browser reloaded')
             return tag, None
         post_source = cls.browser.page_source
         post_soup = BeautifulSoup(post_source, 'html.parser')

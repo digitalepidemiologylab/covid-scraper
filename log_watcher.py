@@ -25,6 +25,8 @@ client = boto3.client('ses', region_name=AWS_REGION)
 
 MAX_PER_PERIOD = 2  # Max emails per period
 PERIOD = 3600  # Period of silence in seconds
+AGGREGATED_PERIOD = 3600 * 6
+WARNING_PERIOD = 3600 * 6
 OLD_BUFFER = 20  # How many old messages to keep for comparison
 
 # Create logger
@@ -72,23 +74,43 @@ def send_email(messages, subject):
         Source=SENDER,
     )
 
+aggregated_phrases = [
+    'has not been saved',
+    'timed out. Retrying.'
+]
+aggregated_conditions = lambda line: any([phrase in line for phrase in aggregated_phrases])
+
 
 if __name__ == '__main__':
+    logger.info('Started script')
     sent_emails = []
-    not_saved = []
+    aggregated = []
+    warnings = []
     messages_old = []
-    start_not_saved = datetime.now()
+    start_aggregated = datetime.now()
+    start_warnings = datetime.now()
     while True:
-        if len(not_saved) > 0 and \
-                (datetime.now() - start_not_saved).seconds > PERIOD:
+        if len(aggregated) > 5 and \
+                (datetime.now() - start_aggregated).seconds > AGGREGATED_PERIOD:
             try:
-                response = send_email(list(dict.fromkeys(not_saved)), 'Files Not Saved')
+                aggregated = [log if 'israel' not in log else 'Israel' for log in aggregated]
+                response = send_email(list(dict.fromkeys(aggregated)), 'Aggregated Errors')
             except ClientError as e:
                 logger.error(e.response['Error']['Message'])
             else:
                 logger.info('Aggregated email sent! Message ID: %s.', response['MessageId'])
-                start_not_saved = datetime.now()
-                not_saved = []
+                start_aggregated = datetime.now()
+                aggregated = []
+        if len(warnings) > 10 and \
+                (datetime.now() - start_warnings).seconds > AGGREGATED_PERIOD:
+            try:
+                response = send_email(list(dict.fromkeys(warnings)), 'Aggregated Warnings')
+            except ClientError as e:
+                logger.error(e.response['Error']['Message'])
+            else:
+                logger.info('Aggregated email sent! Message ID: %s.', response['MessageId'])
+                start_warnings = datetime.now()
+                warnings = []
         if len(sent_emails) > 0 and \
                 (datetime.now() - max(sent_emails)).seconds > PERIOD:
             sent_emails = []
@@ -105,11 +127,13 @@ if __name__ == '__main__':
                 if t.strftime('%Y-%m-%d %H:%M') in line or t_1.strftime('%Y-%m-%d %H:%M') in line:
                     datetime_in_log = True
                 if 'ERROR' in line:
-                    if 'has not been saved' in line:
-                        not_saved.append(line)
+                    if aggregated_conditions(line):
+                        aggregated.append(line)
                     else:
                         has_errors = True
                         errors.append(line)
+                elif 'WARNING' in line:
+                    warnings.append(line)
             message = []
             if not datetime_in_log:
                 message.append(body_text_lag(f_name))
@@ -121,7 +145,7 @@ if __name__ == '__main__':
         if len(messages) > 0:
             if len(sent_emails) < MAX_PER_PERIOD:
                 try:
-                    response = send_email(messages, 'Errors or Missing logs')
+                    response = send_email(messages, 'Missing logs')
                     messages_old.extend(messages)
                     if len(messages_old) > OLD_BUFFER:
                         messages_old = messages_old[-OLD_BUFFER:]

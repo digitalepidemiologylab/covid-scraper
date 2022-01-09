@@ -2,6 +2,46 @@ from string import digits
 
 class SoupSelenium:
     @staticmethod
+    def austria(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                   len(tag.contents) == 1 and \
+                   'dpPositivGetestet' in tag.get('data-key', ['']) and \
+                   'fit' in tag.get('class', [''])
+        tag = soup.find(condition)
+        # print('tag', tag)
+        return tag, int(tag.contents[0].replace('.', ''))
+
+    @staticmethod
+    def estonia(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                ' '.join(tag.get('class', [])) == 'QFReadout QFUpperBound QFDisabled'
+        tag = soup.find(condition)
+        return tag.div, int(tag.div.text.replace('.', ''))
+
+    @staticmethod
+    def italy(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'strong' and \
+                'Totale casi' in tag.text
+        tags = soup.find_all(condition)
+        assert len(tags) == 2
+        # print('TAGS')
+        # print(tags[0].parent.parent.parent.parent.find_next_sibling())
+        # print(tags[1].parent.parent.parent.parent.find_next_sibling())
+        tag = tags[0].parent.parent.parent.parent
+        number_tag = tag.find_next_sibling().g.find_next_sibling().text
+        number = number_tag.replace('\n', '').replace(' ', '').replace(',', '')
+        return tag.parent, int(number)
+
+    @staticmethod
     def israel(soup):
         def condition_outer(tag):
             if tag is None:
@@ -109,3 +149,14 @@ class SoupSelenium:
             # tag.div.div.find_next_sibling().g.find_next_sibling().svg.text
         number = number_tag.replace('\n', '').replace(' ', '').replace(',', '')
         return tag, int(number)
+
+    @staticmethod
+    def united_kingdom(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'value-item-people_tested_positive-total-cumcasesbypublishdate-1_modal' in tag.get('id', '')
+        tags = soup.find_all(condition)
+        assert len(tags) == 1
+        return tags[0], int(tags[0].contents[0].replace(',', ''))
