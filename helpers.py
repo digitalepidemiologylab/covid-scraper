@@ -19,6 +19,10 @@ from selenium.webdriver.support.expected_conditions import _find_element
 from constants import POSTS, DELAY, NUM_RETRIES, GENERATED_NUMBERS_PATH
 
 
+def only_digits(string):
+    return re.sub('[^0-9]', '', string)
+
+
 class Filename:
     def __init__(self, p):
         f_name, *_ = p.name.split('.')
@@ -49,7 +53,8 @@ def get_csv(p, sep):
     elif p.name.endswith('.csv'):
         return pd.read_csv(str(p), sep)
     else:
-        raise ValueError('The format should be CSV or JSON.')
+        raise ValueError(
+            f"The format of file '{p.name}' should be CSV or JSON.")
 
 
 def get_soup(p):

@@ -2,7 +2,7 @@ WEBSITES = {
     # 'Andorra': 'https://www.govern.ad/coronavirus',
     'Andorra': 'https://www.govern.ad/covid/taula.php',
     'Armenia': 'https://e.infogram.com/71d42d9d-504e-4a8b-a697-f52f4178b329?src=embed',
-    'Azerbaijan': 'https://koronavirusinfo.az/az/page/statistika/azerbaycanda-cari-veziyyet',
+    'Azerbaijan': 'https://koronavirusinfo.az/az',
     # 'Austria': 'https://covid19-dashboard.ages.at/',
     'Belarus': 'https://stopcovid.belta.by/',
     'Bulgaria': 'https://coronavirus.bg/bg/',
@@ -18,7 +18,8 @@ WEBSITES = {
     'Italy': 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json',
     # 'Israel': 'https://datadashboard.health.gov.il/COVID-19/general',  # Hard to load
     'Kosovo': 'https://covid19-rks.net/',  # JS
-    'Kyrgyzstan': 'http://med.kg/ru/informatsii.html',
+    # 'Kyrgyzstan': 'http://med.kg/ru/informatsii.html',
+    'Kyrgyzstan': 'http://med.kg',
     'Latvia': 'https://spkc.maps.arcgis.com/apps/opsdashboard/index.html#/4469c1fb01ed43cea6f20743ee7d5939',
     'Lithuania': 'https://e.infogram.com/57e5b447-c2ca-40da-aedb-cbf97df68a8e?src=embed',
     'Luxembourg': 'https://data.public.lu/fr/datasets/covid-19-rapports-journaliers/',
@@ -29,7 +30,8 @@ WEBSITES = {
     'Netherlands': 'https://data.rivm.nl/covid-19/COVID-19_aantallen_gemeente_per_dag.csv',
     'North_Macedonia': 'http://iph.mk/category/informacii/',  # PDFs with info
     'Poland': 'https://rcb-gis.maps.arcgis.com/apps/dashboards/fc789be735144881a5ea2c011f6c9265',
-    'Portugal': 'https://covid19.min-saude.pt/relatorio-de-situacao/',
+    # 'Portugal': 'https://covid19.min-saude.pt/relatorio-de-situacao/',
+    'Portugal': 'https://esriportugal.maps.arcgis.com/apps/dashboards/01bb26e8a53847338f1d508da7e7924a',
     # 'Romania': 'https://instnsp.maps.arcgis.com/apps/dashboards/5eced796595b4ee585bcdba03e30c127',
     'Russia': 'https://стопкоронавирус.рф',
     'San_Marino': 'https://www.iss.sm/on-line/home/archivio-ufficio-stampa-iss.html',
@@ -48,13 +50,13 @@ POSTS = [
 WGET_DOWNLOADS = [
     'Andorra', 'Armenia', 'Azerbaijan', 'Belarus', 'Bulgaria', 'Czechia',
     'France', 'Germany', 'Gibraltar', 'Greece', 'Kyrgyzstan',
-    'Luxembourg', 'North_Macedonia', 'Portugal', 'Russia', 'Spain',
+    'Luxembourg', 'North_Macedonia', 'Russia', 'Spain',
     'Switzerland', 'Ukraine', 'Uzbekistan'
 ]
 
 SELENIUM_DOWNLOADS = [
-    'Austria', 'Estonia', 'Italy', 'Israel', 'Kosovo', 'Latvia', 'Lithuania', 'Montenegro',
-    'Poland', 'Romania', 'United_Kingdom'
+    'Austria', 'Estonia', 'Israel', 'Kosovo', 'Latvia', 'Lithuania', 'Montenegro',
+    'Poland', 'Portugal', 'Romania', 'United_Kingdom'
 ]
 
 CSVS = {
@@ -79,14 +81,16 @@ XPATHS = {
     'Lithuania': "//span[contains(text(),'Iš viso buvusių/esamų atvejų skaičius')]",
     'Montenegro': "//*[//span[contains(text(), 'UKUPAN BROJ OBOLJELIH')] and //div[@class='igc-textual-text innertext']]",
     'Poland': "//strong[contains(text(),'osoby zakażone od 4 marca 2020')]",
+    'Portugal': "//div[@class='responsive-text flex-vertical flex-fix allow-shrink indicator-top-text']",
     'Romania': "//*[@style='fill: rgb(230, 0, 0); stroke-width: 2px; font-size: 160px; line-height: normal;']",
     'United_Kingdom': "//a[@id='value-item-people_tested_positive-total-cumcasesbypublishdate-1_modal']"
 }
 
 SLEEPS = {
-    'Italy': 10
+    'Italy': 10,
+    'Portugal': 7,
 }
 
-LOGGER_BACKUP_COUNT = 5
+LOGGER_BACKUP_COUNT = 20
 
 GENERATED_NUMBERS_PATH = 'logs/numbers_generated.json'

@@ -1,7 +1,10 @@
 import re
 
+from helpers import only_digits
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+
 
 class SoupWgets:
     @staticmethod
@@ -10,8 +13,8 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'div' and \
-                   'col-2' in tag.get('class', '') and \
-                   'Confirmats totals' in tag.contents[0]
+                'col-2' in tag.get('class', '') and \
+                'Confirmats totals' in tag.contents[0]
         tags = soup.find_all(condition)
         assert len(tags) == 1
         return tags[0].parent, int(tags[0].contents[2])
@@ -22,8 +25,8 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'script' and \
-                   len(tag.contents) == 1 and \
-                   'window.infographicData' in tag.contents[0]
+                len(tag.contents) == 1 and \
+                'window.infographicData' in tag.contents[0]
         tag = soup.find(condition)
         cases = re.search(
             '"text":"Հաստատված դեպքերի ընդհանուր քանակը-([0-9]+)"',
@@ -37,11 +40,11 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'span' and \
-                   'Virusa yoluxan' in tag.contents[0]
+                'Virusa yoluxan' in tag.contents[0]
         tags = soup.find_all(condition)
-        assert len(tags) == 1
+        # assert len(tags) == 2
         return tags[0].parent.parent, \
-               int(tags[0].find_previous_sibling('strong').contents[0])
+            int(tags[0].find_previous_sibling('strong').contents[0])
 
     @staticmethod
     def belarus(soup):
@@ -49,12 +52,12 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'div' and \
-                   'ЗАРЕГИСТРИРОВАНЫ' in tag.contents
+                'ЗАРЕГИСТРИРОВАНЫ' in tag.contents
         tags = soup.find_all(condition)
         assert len(tags) == 2
         return tags[0].parent.parent, \
-               int(tags[0].find_previous_sibling(
-                   "div").contents[0].contents[0].replace(' ', ''))
+            int(tags[0].find_previous_sibling(
+                'div').contents[0].contents[0].replace(' ', ''))
 
     @staticmethod
     def bulgaria(soup):
@@ -112,7 +115,7 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'li' and \
-                   'Confirmed cases:' in tag.contents[0]
+                'Confirmed cases:' in tag.contents[0]
         tags = soup.find_all(condition)
         assert len(tags) == 1
         return tags[0].parent, int(tags[0].contents[0][17:])
@@ -124,11 +127,13 @@ class SoupWgets:
                 return False
             return tag.name == 'li' and \
                 'Recovered cases:' in tag.contents[0]
+
         def condition_active(tag):
             if tag is None:
                 return False
             return tag.name == 'li' and \
                 'Active cases in Gibraltar' in tag.contents[0]
+
         def condition_deaths(tag):
             if tag is None:
                 return False
@@ -141,8 +146,8 @@ class SoupWgets:
         assert len(tags_active) == 1
         assert len(tags_deaths) == 1
         total_cases = int(tags_recovered[0].contents[0][17:]) + \
-                    int(tags_active[0].contents[2].split('(')[0][2:]) + \
-                    int(tags_deaths[0].contents[0][8:])
+            int(tags_active[0].contents[2].split('(')[0][2:]) + \
+            int(tags_deaths[0].contents[0][8:])
         return tags_recovered[0].parent, total_cases
 
     @staticmethod
@@ -152,11 +157,13 @@ class SoupWgets:
                 return False
             return tag.name == 'li' and \
                 'Recovered cases:' in tag.contents[0]
+
         def condition_active(tag):
             if tag is None:
                 return False
             return tag.name == 'li' and \
                 'Active cases in Gibraltar' in tag.contents[0]
+
         def condition_deaths(tag):
             if tag is None:
                 return False
@@ -168,9 +175,9 @@ class SoupWgets:
         assert len(tags_recovered) == 1
         assert len(tags_active) == 1
         assert len(tags_deaths) == 1
-        total_cases = int(tags_recovered[0].contents[0][17:]) + \
-                    int(tags_active[0].contents[2].split('(')[0][2:]) + \
-                    int(tags_deaths[0].contents[0][8:].split(' ')[0])
+        total_cases = int(only_digits(tags_recovered[0].contents[0][17:])) + \
+            int(only_digits(tags_active[0].contents[2].split('(')[0][2:])) + \
+            int(only_digits(tags_deaths[0].contents[0][8:].split(' ')[0]))
         return tags_recovered[0].parent, total_cases
 
     @staticmethod
@@ -179,17 +186,17 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'a' and \
-                   'Ημερήσια έκθεση επιτήρησης COVID-19' in tag.get('aria-label', '')
+                'Ημερήσια έκθεση επιτήρησης COVID-19' in tag.get('aria-label', '')
         tag = soup.find(condition)
         return tag['aria-label'], None
 
     @staticmethod
-    def kyrgyzstan(soup):
+    def kyrgyzstan_before_2021_01_12_9_15_00(soup):
         def condition(tag):
             if tag is None:
                 return False
             return tag.name == 'section' and \
-                   'sp-section-3' in tag.get('id', '')
+                'sp-section-3' in tag.get('id', '')
         tag = soup.find(condition)
         covid_1 = tag.tbody.tr.find_next_sibling().find_next_sibling(
             ).td.find_next_sibling().find_next_sibling()
@@ -201,13 +208,26 @@ class SoupWgets:
         return tag.tbody, cases[0]
 
     @staticmethod
+    def kyrgyzstan(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h4' and \
+                'Всего' in tag.text
+        tag = soup.find(condition)
+        covid_1 = tag.parent.parent.find_next_sibling().find_next_sibling().div
+        covid_2 = covid_1.find_next_sibling()
+        cases = int(covid_1.h4.text) + int(covid_2.h4.text)
+        return tag.parent.parent, cases
+
+    @staticmethod
     def luxembourg(soup):
         def condition(tag):
             if tag is None:
                 return False
             return tag.name == 'article' and \
-                   'card' in tag.get('class', []) and \
-                   'resource-card' in tag.get('class', [])
+                'card' in tag.get('class', []) and \
+                'resource-card' in tag.get('class', [])
         tag = soup.find(condition)
         return tag.div.h4.contents[0], None
 
@@ -217,7 +237,7 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'a' and \
-                   'податоци за covid-19' in tag.get('title', '').lower()
+                'податоци за covid-19' in tag.get('title', '').lower()
         tag = soup.find(condition)
         return tag, None
 
@@ -227,8 +247,8 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'a' and \
-                    len(tag.contents) == 1 and \
-                   'Relatório de Situação nº' in tag.text
+                len(tag.contents) == 1 and \
+                'Relatório de Situação nº' in tag.text
         tag = soup.find(condition)
         return tag.text, None
 
@@ -238,7 +258,7 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'div' and \
-                   'banner-coronavirus banner-verde' == ' '.join(tag.get('class', ['']))
+                'banner-coronavirus banner-verde' == ' '.join(tag.get('class', ['']))
         tag = soup.find(condition)
         return tag, int(tag.find('p', {'class': 'cifra'}).text.replace('.', ''))
 
@@ -247,15 +267,20 @@ class SoupWgets:
         def condition(tag):
             if tag is None:
                 return False
+            # Change since 2022-01-20 11:24:23
+            # 'Выявлено случаев' = total cases -> 'Выявлено' = daily cases
             return tag.name == 'div' and \
-                   'cv-countdown__item-label' in tag.get('class', '') and \
-                   'Выявлено случаев' in tag.contents and \
-                   len(tag.contents) == 1
+                'cv-countdown__item-label' in tag.get('class', '') and \
+                len(tag.contents) == 1 and \
+                (
+                    'Выявлено' in tag.contents or
+                    'Выявлено случаев' in tag.contents
+                )
         tags = soup.find_all(condition)
         # assert len(tags) == 1
         return tags[0].parent.parent, \
-               int(tags[0].find_previous_sibling(
-               ).contents[0].contents[0].replace(' ', ''))
+            int(tags[0].find_previous_sibling(
+            ).contents[0].contents[0].replace(' ', ''))
 
     @staticmethod
     def switzerland(soup):
@@ -263,9 +288,9 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'th' and \
-                   tag.get('class', [''])[0] == 'detail-card-geography-table__title-cell' and \
-                   len(tag.contents) == 1 and \
-                   tag.contents[0] == 'Switzerland'
+                tag.get('class', [''])[0] == 'detail-card-geography-table__title-cell' and \
+                len(tag.contents) == 1 and \
+                tag.contents[0] == 'Switzerland'
         tag = soup.find(condition)
         number_tag = tag.find_next_sibling().find_next_sibling()
         number = number_tag.contents[0].replace(' ', '')
@@ -277,12 +302,12 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'span' and \
-                   'хворих на Covid-19' in tag.contents
+                'хворих на Covid-19' in tag.contents
         tags = soup.find_all(condition)
         assert len(tags) == 1
         return tags[0].parent.parent, \
-               int(tags[0].find_next_sibling(
-                   ).contents[0].strip().replace(' ', ''))
+            int(tags[0].find_next_sibling(
+                ).contents[0].strip().replace(' ', ''))
 
     @staticmethod
     def uzbekistan(soup):
@@ -290,8 +315,8 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'p' and \
-                   'Всего подтверждено' in tag.contents[0]
+                'Всего подтверждено' in tag.contents[0]
         tags = soup.find_all(condition)
         assert len(tags) == 1
         return tags[0].parent.parent.parent, \
-               int(tags[0].find_next_sibling()['data-count'])
+            int(tags[0].find_next_sibling()['data-count'])

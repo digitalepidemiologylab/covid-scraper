@@ -47,11 +47,47 @@ logger.addHandler(writetofile_handler)
 
 
 if __name__ == '__main__':
-    country = 'Gibraltar'
-    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(country.lower()) and p.name.endswith('html')])
+    country = 'Lithuania'
+    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
     for i in range(len(ps) - 1):
         t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
-        copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
+        copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
+
+    # country = 'San_Marino'
+    # ps = sorted([
+    #     p for p in Path('data/processing_exception').iterdir()
+    #     if p.name.startswith(country.lower()) and p.name.endswith('html') and
+    #     Filename(p).later_than(datetime(2021, 12, 26)) and
+    #     Filename(p).earlier_than(datetime(2022, 1, 4))
+    # ])
+    # print(len(ps))
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupPosts, logger)
+
+    # country = 'Gibraltar'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
+
+    # country = 'Azerbaijan'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
+
+    # country = 'Russia'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
+
+    # country = 'Gibraltar'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(country.lower()) and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
 
     # country = 'Israel'
     # ps = sorted([p for p in Path('data').iterdir() if p.name.startswith(country.lower())])

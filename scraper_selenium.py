@@ -39,6 +39,7 @@ if __name__ == '__main__':
     options = Options()
     options.headless = True
     browser = webdriver.Firefox(options=options)
+    overtime_count = 0
     try:
         while True:
             user = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) ' \
@@ -70,13 +71,18 @@ if __name__ == '__main__':
             full_cycle = time.time() - start_time
             logger.info('CYCLE COMPLETE: %d s', time.time() - start_time)
             # break
-            if full_cycle > 50:
-                browser.close()
-                browser = webdriver.Firefox(options=options)
-                logger.info('Browser reloaded')
-            t = datetime.utcnow()
-            sleeptime = 60 - (t.second + t.microsecond/1000000.0)
-            time.sleep(sleeptime)
+            if full_cycle > 60:
+                overtime_count += 1
+                if overtime_count > 5:
+                    overtime_count = 0
+                    browser.close()
+                    browser = webdriver.Firefox(options=options)
+                    logger.info('Browser reloaded')
+                sleeptime = 0
+            else:
+                t = datetime.utcnow()
+                sleeptime = 60 - (t.second + t.microsecond/1000000.0)
+                time.sleep(sleeptime)
             # if int(full_cycle) < 60:
             #     sleep(60 - int(full_cycle))
     except KeyboardInterrupt:

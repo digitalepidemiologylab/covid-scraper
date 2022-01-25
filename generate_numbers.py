@@ -55,13 +55,15 @@ def get_paths(country, later=None):
     ps = sorted([
         p for p in Path('data').iterdir()
         if p.name.startswith(f'{country.lower()}_') and
-        p.name.split('.')[-1] == 'html'
+        len(p.name.split('.')) == 2
     ])
     if later is not None:
         for p in ps:
             if Filename(p).later_than(later):
                 return ps[ps.index(p):]
-    return ps
+        return []
+    else:
+        return ps
 
 
 if __name__ == '__main__':
@@ -70,6 +72,7 @@ if __name__ == '__main__':
         later = args.later
     else:
         later = datetime.strptime(args.later, '%Y-%m-%d_%H-%M-%S')
+    logger.info(later)
 
     numbers_path = Path(GENERATED_NUMBERS_PATH)
     with numbers_path.open('w') as f:

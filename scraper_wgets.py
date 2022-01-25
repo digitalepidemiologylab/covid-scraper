@@ -37,7 +37,6 @@ if __name__ == '__main__':
         start_time = time.time()
         wget_websites = {
             k: v for k, v in WEBSITES.items() if k in WGET_DOWNLOADS}
-        logger.info(wget_websites.keys())
         for country, url in wget_websites.items():
             t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
             p = f"data/{country.lower()}_{t}.html"
