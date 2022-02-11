@@ -47,11 +47,35 @@ logger.addHandler(writetofile_handler)
 
 
 if __name__ == '__main__':
-    country = 'Lithuania'
-    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    country = 'Poland'
+    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
     for i in range(len(ps) - 1):
         t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
         copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
+
+    # country = 'Monaco'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupPosts, logger)
+
+    # country = 'Lithuania'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
+
+    # country = 'Germany'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupWgets, logger)
+
+    # country = 'Lithuania'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-01') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
 
     # country = 'San_Marino'
     # ps = sorted([

@@ -2,6 +2,14 @@ import pandas as pd
 
 class Csv:
     @staticmethod
+    def austria(df):
+        max_date = df['Datum'].max()
+        df = df[df['Datum'] == max_date]
+        total = df[df['Name'] == 'Österreich']['BestaetigteFaelleEMS']
+        assert len(total) == 1
+        return max_date, int(total)
+
+    @staticmethod
     def italy(df):
         return df.to_json(orient='index'), int(df['totale_positivi'][0])
 

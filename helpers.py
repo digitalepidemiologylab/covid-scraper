@@ -19,6 +19,9 @@ from selenium.webdriver.support.expected_conditions import _find_element
 from constants import POSTS, DELAY, NUM_RETRIES, GENERATED_NUMBERS_PATH
 
 
+# def retry_on_error()
+
+
 def only_digits(string):
     return re.sub('[^0-9]', '', string)
 
@@ -44,14 +47,19 @@ def compare_strings(soup_1, soup_2):
     return hash_1 == hash_2
 
 
-def get_csv(p, sep):
+def get_csv(p, sep, logger):
     if p.name.endswith('.json'):
         # with p.open('r') as f:
             # print(json.load(f))
             # print(f.read())
         return pd.read_json(str(p), orient='records')
     elif p.name.endswith('.csv'):
-        return pd.read_csv(str(p), sep)
+        try:
+            return pd.read_csv(str(p), sep)
+        except pd.errors.ParserError as exc:
+            logger.error(
+                '%s: %s. Traceback: %s', type(exc).__name__, str(exc),
+                '; '.join(traceback.format_tb(exc.__traceback__)))
     else:
         raise ValueError(
             f"The format of file '{p.name}' should be CSV or JSON.")
@@ -102,7 +110,7 @@ def remove_if_needed(
 
 
 def remove_latest_if_csv_unchanged(p_1, p_2, country, sep, t, Csv, logger):
-    csv_1, csv_2 = [get_csv(p, sep) for p in [p_1, p_2]]
+    csv_1, csv_2 = [get_csv(p, sep, logger) for p in [p_1, p_2]]
     num_1 = None
     num_2 = None
     try:
@@ -179,7 +187,7 @@ def copy_if_changed(
 
 def copy_latest_if_csv_changed(p_1, p_2, country, sep, Csv, logger):
     logger.info(p_2)
-    csv_1, csv_2 = [get_csv(p, sep) for p in [p_1, p_2]]
+    csv_1, csv_2 = [get_csv(p, sep, logger) for p in [p_1, p_2]]
     num_1 = None
     num_2 = None
     try:
@@ -234,7 +242,7 @@ def send_to_numbers(p, country, num):
 
 
 def send_to_numbers_csv(p, country, sep, Csv, logger):
-    csv = get_csv(p, sep)
+    csv = get_csv(p, sep, logger)
     num = None
     try:
         csv, num = getattr(Csv, country.lower())(csv)
@@ -284,9 +292,13 @@ def send_to_numbers_html(p, country, Soup, logger):
 #             return re.search(re.compile(self.regexp), element_text)
 
 
-def wait_until_xpath(browser, url, xpath, logger, errors=0, sleep=1):
+def wait_until_xpath(
+    browser, url, xpath, logger, *, before_wait=None, errors=0, sleep=1
+):
     try:
         browser.get(url)
+        if before_wait is not None:
+            before_wait(browser)
         # WebDriverWait(browser, DELAY).until(text_match((By.XPATH, xpath), pattern))
         WebDriverWait(browser, DELAY).until(
             EC.presence_of_element_located((
@@ -300,7 +312,9 @@ def wait_until_xpath(browser, url, xpath, logger, errors=0, sleep=1):
         errors += 1
         logger.warning("Request for '%s' timed out. Retrying.", url)
         if errors < NUM_RETRIES:
-            wait_until_xpath(browser, url, xpath, logger, errors, sleep)
+            wait_until_xpath(
+                browser, url, xpath, logger,
+                before_wait=before_wait, errors=errors, sleep=sleep)
         else:
             logger.error("Info for '%s' could not be loaded.", url)
             return True

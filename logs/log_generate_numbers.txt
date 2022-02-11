@@ -1,3 +1,31 @@
 2022-01-24 16:06:24,862 - generate_numbers - INFO - 2022-01-16 23:00:00
 2022-01-24 16:13:39,710 - generate_numbers - INFO - 2022-01-16 23:00:00
 2022-01-24 16:14:27,021 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-28 18:33:12,315 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-28 18:34:53,296 - generate_numbers - ERROR - 'data/monaco_2022-01-28_18-15-00.html' AttributeError: 'NoneType' object has no attribute 'group'
+2022-01-28 18:40:35,446 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-28 18:41:37,642 - generate_numbers - ERROR - 'data/monaco_2022-01-28_18-38-00.html' AttributeError: 'NoneType' object has no attribute 'group'
+2022-01-29 13:38:28,442 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-29 13:39:45,554 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-29 13:53:31,963 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-29 13:54:01,503 - generate_numbers - INFO - 2022-01-16 23:00:00
+2022-01-29 13:54:02,234 - generate_numbers - ERROR - 'data/azerbaijan_2022-01-29_13-54-00.html' IndexError: list index out of range
+2022-01-29 13:54:35,541 - generate_numbers - ERROR - ParserError: Error tokenizing data. C error: Expected 12 fields in line 97874, saw 21
+. Traceback:   File "/drives/sdc/olesia/covid-scraping/helpers.py", line 58, in get_csv
+    return pd.read_csv(str(p), sep)
+;   File "/drives/sdc/miniconda3/envs/covscr/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+;   File "/drives/sdc/miniconda3/envs/covscr/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+;   File "/drives/sdc/miniconda3/envs/covscr/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 488, in _read
+    return parser.read(nrows)
+;   File "/drives/sdc/miniconda3/envs/covscr/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1047, in read
+    index, columns, col_dict = self._engine.read(nrows)
+;   File "/drives/sdc/miniconda3/envs/covscr/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 224, in read
+    chunks = self._reader.read_low_memory(nrows)
+;   File "pandas/_libs/parsers.pyx", line 801, in pandas._libs.parsers.TextReader.read_low_memory
+;   File "pandas/_libs/parsers.pyx", line 857, in pandas._libs.parsers.TextReader._read_rows
+;   File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+;   File "pandas/_libs/parsers.pyx", line 1925, in pandas._libs.parsers.raise_parser_error
+
+2022-01-29 13:54:35,541 - generate_numbers - ERROR - 'data/netherlands_2022-01-25_07-10-00.csv' TypeError: 'NoneType' object is not subscriptable

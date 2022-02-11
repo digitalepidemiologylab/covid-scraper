@@ -45,6 +45,19 @@ class SoupSelenium:
 
     @staticmethod
     def israel(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            # 'נפטרים מצטבר' in tag.contents[0]  # deaths
+            return tag.name == 'h3' and \
+                len(tag.contents) == 1 and \
+                'אחוז נבדקים חיוביים אתמול' in tag.contents[0]  # percent of positive tests
+        tag = soup.find(condition).parent.parent
+        number = tag.find_next_sibling().find('h4').text
+        return tag, str(number)
+
+    @staticmethod
+    def israel_2022_01_30(soup):
         def condition_outer(tag):
             if tag is None:
                 return False
@@ -65,7 +78,7 @@ class SoupSelenium:
         return tag_inner.parent, int(only_digits(number))
 
     @staticmethod
-    def kosovo(soup):
+    def kosovo_old(soup):
         def condition(tag):
             if tag is None:
                 return False
@@ -74,6 +87,17 @@ class SoupSelenium:
                 'Raste' in tag.contents[0]
         tags = soup.find_all(condition)
         return tags[1].parent, int(only_digits(tags[1].parent.h3.contents[0]))
+
+    @staticmethod
+    def kosovo(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                'kpi-label' in tag.get('class', []) and \
+                'Gjithsej' in tag.text
+        tag = soup.find(condition)
+        return tag.parent, int(only_digits(tag.find_next_sibling().text))
 
     @staticmethod
     def latvia(soup):
@@ -94,9 +118,11 @@ class SoupSelenium:
         def condition(tag):
             if tag is None:
                 return False
+            # Before 2022-02-06: 'Iš viso buvusių/esamų atvejų skaičius' in tag.contents[0]
             return tag.name == 'span' and \
                 len(tag.contents) == 1 and \
-                'Iš viso buvusių/esamų atvejų skaičius' in tag.contents[0]
+                'Iš viso buvusių/esamų' in tag.contents[0] and \
+                'skaičius' in tag.contents[0]
         tag = soup.find(condition)
         number = tag.parent.parent.td.span.contents[0]
         return tag.parent.parent, int(only_digits(number))
@@ -123,9 +149,11 @@ class SoupSelenium:
     @staticmethod
     def poland(soup):
         def condition(tag):
+            # Before 2022-02
+            # 'osoby zakażone od 4 marca 2020' in tag.contents[0]
             return tag.name == 'strong' and \
                 len(tag.contents) == 1 and \
-                'osoby zakażone od 4 marca 2020' in tag.contents[0]
+                'od 4 marca 2020' in tag.contents[0]
         tag = soup.find(condition)
         tag = tag.parent.parent.parent
         number_tag = \

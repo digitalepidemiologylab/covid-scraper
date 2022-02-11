@@ -86,7 +86,8 @@ if __name__ == '__main__':
     sent_emails = []
     aggregated = []
     warnings = []
-    messages_old = []
+    missing_logs_old = []
+    unexpected_errors_old = []
     start_aggregated = datetime.now()
     start_warnings = datetime.now()
     while True:
@@ -114,50 +115,63 @@ if __name__ == '__main__':
         if len(sent_emails) > 0 and \
                 (datetime.now() - max(sent_emails)).seconds > PERIOD:
             sent_emails = []
-        messages = []
+
+        # Grab the recent errors from the log files
+        missing_logs_global = []
+        unexpected_errors_global = []
         for f_name in LOG_FILES:
             f_name = 'logs/' + f_name
+            # Read last 5 lines of a log file
             lines = os.popen(f'tail -n 5 {f_name}').read().split('\n')
             t = datetime.now()
             t_1 = t - timedelta(minutes=1)
-            datetime_in_log = False
-            has_errors = False
-            errors = []
+            has_missing_logs = True
+            has_unexpected_errors = False
+            unexpected_errors = []
             for line in lines:
+                # Check if there was activity for the last minute
                 if t.strftime('%Y-%m-%d %H:%M') in line or t_1.strftime('%Y-%m-%d %H:%M') in line:
-                    datetime_in_log = True
+                    has_missing_logs = False
                 if 'ERROR' in line:
                     if aggregated_conditions(line):
                         aggregated.append(line)
                     else:
-                        has_errors = True
-                        errors.append(line)
+                        has_unexpected_errors = True
+                        unexpected_errors.append(line)
                 elif 'WARNING' in line:
                     warnings.append(line)
-            message = []
-            if not datetime_in_log:
-                message.append(body_text_lag(f_name))
-            if has_errors:
-                message.extend(errors)
-            if len(message) > 0:
-                messages.extend(message)
-        messages = [message for message in messages if message not in messages_old]
-        if len(messages) > 0:
-            if len(sent_emails) < MAX_PER_PERIOD:
-                try:
-                    response = send_email(messages, 'Missing logs')
-                    messages_old.extend(messages)
-                    if len(messages_old) > OLD_BUFFER:
-                        messages_old = messages_old[-OLD_BUFFER:]
-                except ClientError as e:
-                    logger.error(e.response['Error']['Message'])
+            if has_missing_logs:
+                missing_logs_global.append(body_text_lag(f_name))
+            if has_unexpected_errors:
+                unexpected_errors_global.extend(unexpected_errors)
+
+        # sent_emails, logger are taken from global env
+        def email_messages(messages, messages_old, title):
+            # Check if the some of the messages were already emailed
+            messages = [message for message in messages if message not in messages_old]
+            if len(messages) > 0:
+                if len(sent_emails) < MAX_PER_PERIOD:
+                    try:
+                        response = send_email(messages, title)
+                        messages_old.extend(messages)
+                        if len(messages_old) > OLD_BUFFER:
+                            messages_old = messages_old[-OLD_BUFFER:]
+                    except ClientError as e:
+                        logger.error(e.response['Error']['Message'])
+                    else:
+                        logger.info('Email sent! Message ID: %s.', response['MessageId'])
+                        sent_emails.append(datetime.now())
                 else:
-                    logger.info('Email sent! Message ID: %s.', response['MessageId'])
-                    sent_emails.append(datetime.now())
+                    logger.warning('Will not send the email (too many per hour).')
             else:
-                logger.warning('Will not send the email (too many per hour).')
-        else:
-            logger.info('Everything is fine.')
+                logger.info(f'No {title.lower()}.')
+            return messages_old
+
+        missing_logs_old = email_messages(
+            missing_logs_global, missing_logs_old, 'Missing logs')
+        unexpected_errors_old = email_messages(
+            unexpected_errors_global, unexpected_errors_old, 'Unexpected errors')
+
         t = datetime.utcnow()
         sleeptime = 60 - (t.second + t.microsecond/1000000.0)
         time.sleep(sleeptime)

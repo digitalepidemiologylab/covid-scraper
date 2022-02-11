@@ -10,7 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import TimeoutException
 
-from constants import SLEEPS, WEBSITES, SELENIUM_DOWNLOADS, XPATHS, LOGGER_BACKUP_COUNT
+from constants import SLEEPS, WEBSITES, SELENIUM_DOWNLOADS, XPATHS, LOGGER_BACKUP_COUNT, BEFORE_WAIT
 from helpers import remove_latest_if_page_unchanged, wait_until_xpath
 from soup_selenium import SoupSelenium
 
@@ -52,8 +52,11 @@ if __name__ == '__main__':
                 t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
                 p = f"data/{country.lower()}_{t}.html"
                 errors = 0
-                continuee = wait_until_xpath(browser, url, XPATHS[country], logger, errors, SLEEPS.get(country, 1))
-                if continuee:
+                continuee = wait_until_xpath(
+                    browser, url, XPATHS[country], logger,
+                    before_wait=BEFORE_WAIT.get(country, None), errors=errors,
+                    sleep=SLEEPS.get(country, 1))
+                if continuee is True:
                     continue
                 source = browser.page_source
                 with open(p, 'w') as f:

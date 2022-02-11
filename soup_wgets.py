@@ -2,9 +2,6 @@ import re
 
 from helpers import only_digits
 
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
-
 
 class SoupWgets:
     @staticmethod
@@ -107,7 +104,9 @@ class SoupWgets:
                 'Gesamt' == tag.text
         tag = soup.find(condition)
         tag = tag.parent.find_next_sibling()
-        return tag, int(tag.strong.text.replace('.', ''))
+        # Before 2022-01-26
+        # return tag, int(tag.strong.text.replace('.', ''))
+        return tag, int(only_digits(tag.text))
 
     @staticmethod
     def gibraltar_before_2021_11_20_17_24_02(soup):
@@ -261,6 +260,16 @@ class SoupWgets:
                 'banner-coronavirus banner-verde' == ' '.join(tag.get('class', ['']))
         tag = soup.find(condition)
         return tag, int(tag.find('p', {'class': 'cifra'}).text.replace('.', ''))
+
+    @staticmethod
+    def romania(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h3' and \
+                tag.get('id', '') == 'chart-label-confirmed_cases'
+        tag = soup.find(condition)
+        return tag, int(only_digits(tag.text))
 
     @staticmethod
     def russia(soup):
