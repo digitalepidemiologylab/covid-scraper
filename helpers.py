@@ -55,7 +55,7 @@ def get_csv(p, sep, logger):
         return pd.read_json(str(p), orient='records')
     elif p.name.endswith('.csv'):
         try:
-            return pd.read_csv(str(p), sep)
+            return pd.read_csv(str(p), sep, index_col=False)
         except pd.errors.ParserError as exc:
             logger.error(
                 '%s: %s. Traceback: %s', type(exc).__name__, str(exc),

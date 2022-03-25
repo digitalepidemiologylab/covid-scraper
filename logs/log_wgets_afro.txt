@@ -1,0 +1,139 @@
+2022-03-25 08:54:06,683 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 6 s
+2022-03-25 08:55:09,588 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 08:55:09,588 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 9 s
+2022-03-25 08:56:09,724 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 08:56:09,724 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 9 s
+2022-03-25 08:57:07,680 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 08:57:07,681 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 08:58:06,596 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 08:58:06,597 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 6 s
+2022-03-25 08:59:04,323 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 08:59:04,323 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 4 s
+2022-03-25 09:00:08,424 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:00:08,425 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 8 s
+2022-03-25 09:01:04,439 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:01:04,439 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 4 s
+2022-03-25 09:02:08,382 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:02:08,382 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 8 s
+2022-03-25 09:03:07,048 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:03:07,049 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 6 s
+2022-03-25 09:04:07,100 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:04:07,101 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 09:05:10,249 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:05:10,250 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 10 s
+2022-03-25 09:06:05,061 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:06:05,061 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 5 s
+2022-03-25 09:07:07,881 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:07:07,882 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 09:08:07,059 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:08:07,059 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 09:09:06,941 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:09:06,941 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 6 s
+2022-03-25 09:10:05,935 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:10:05,936 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 5 s
+2022-03-25 09:11:07,232 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:11:07,233 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 09:12:04,140 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:12:04,141 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 4 s
+2022-03-25 09:13:04,605 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:13:04,605 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 4 s
+2022-03-25 09:14:08,092 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:14:08,092 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 8 s
+2022-03-25 09:15:08,276 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:15:08,277 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 8 s
+2022-03-25 09:16:07,377 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:16:07,377 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s
+2022-03-25 09:17:07,513 - scraper_wgets_afro - ERROR - AttributeError: 'NoneType' object has no attribute 'find_next_sibling'. Traceback:   File "/drives/sdc/olesia/covid-scraping-cluster/helpers.py", line 142, in remove_latest_if_page_unchanged
+    soup_2, num_2 = getattr(Soup, country.lower())(soup_2)
+;   File "/drives/sdc/olesia/covid-scraping-cluster/soup_wgets.py", line 389, in sierra_leone
+    total = tag.find_next_sibling().text
+
+2022-03-25 09:17:07,513 - scraper_wgets_afro - INFO - CYCLE COMPLETE: 7 s

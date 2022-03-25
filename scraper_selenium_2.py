@@ -8,7 +8,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import WebDriverException
 
 from constants import SLEEPS, WEBSITES, SELENIUM_DOWNLOADS_2, XPATHS, LOGGER_BACKUP_COUNT, BEFORE_WAIT
 from helpers import remove_latest_if_page_unchanged, wait_until_xpath
@@ -59,7 +59,10 @@ if __name__ == '__main__':
                 if continuee is None:
                     print('CONTINUE')
                     continue
-                source = browser.page_source
+                try:
+                    source = browser.page_source
+                except WebDriverException:
+                    continue
                 with open(p, 'w') as f:
                     logger.debug('Written page source to file %s', p)
                     f.write(source)
@@ -77,7 +80,7 @@ if __name__ == '__main__':
             # break
             if full_cycle > 60:
                 overtime_count += 1
-                if overtime_count > 5:
+                if overtime_count > 2:
                     overtime_count = 0
                     browser.close()
                     browser = webdriver.Firefox(options=options)

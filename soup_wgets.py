@@ -10,7 +10,7 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'div' and \
-                'col-2' in tag.get('class', '') and \
+                'col-2' in tag.get('class', []) and \
                 'Confirmats totals' in tag.contents[0]
         tags = soup.find_all(condition)
         assert len(tags) == 1
@@ -62,8 +62,8 @@ class SoupWgets:
             if tag is None:
                 return False
             return tag.name == 'p' and \
-                'statistics-value' in tag.get('class', ['']) and \
-                'confirmed' in tag.get('class', ['']) and \
+                'statistics-value' in tag.get('class', []) and \
+                'confirmed' in tag.get('class', []) and \
                 len(tag.contents) == 1
         tag = soup.find(condition)
         return tag, int(tag.contents[0])
@@ -279,7 +279,7 @@ class SoupWgets:
             # Change since 2022-01-20 11:24:23
             # 'Выявлено случаев' = total cases -> 'Выявлено' = daily cases
             return tag.name == 'div' and \
-                'cv-countdown__item-label' in tag.get('class', '') and \
+                'cv-countdown__item-label' in tag.get('class', []) and \
                 len(tag.contents) == 1 and \
                 (
                     'Выявлено' in tag.contents or
@@ -329,3 +329,74 @@ class SoupWgets:
         assert len(tags) == 1
         return tags[0].parent.parent.parent, \
             int(tags[0].find_next_sibling()['data-count'])
+
+    # AFRO
+    @staticmethod
+    def cote_divoire_one(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                'alert alert-danger alert-dismissible fade show cas' in ' '.join(tag.get('class', [])) and \
+                'Cas Confirmés' in tag.text
+        tag = soup.find(condition)
+        total = tag.strong.text
+        return tag, int(only_digits(total))
+
+    @staticmethod
+    def equatorial_guinea(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'b' and \
+                'Casos confirmados' == tag.text
+        tag = soup.find(condition).parent.parent
+        total = tag.find_next_sibling().find_next_sibling().find_next_sibling().text
+        return tag, int(only_digits(total))
+
+    @staticmethod
+    def ethiopia(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                'highlight-body' in tag.get('class', []) and \
+                'Total Cases' == tag.text
+        tag = soup.find(condition).parent
+        return tag, int(only_digits(tag.div.text))
+
+    @staticmethod
+    def nigeria(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h6' and \
+                'text-white' in tag.get('class', []) and \
+                'Confirmed Cases' in tag.text
+        tag = soup.find(condition).parent
+        total = tag.h2.text
+        return tag, int(only_digits(total))
+
+    @staticmethod
+    def sierra_leone(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'span' and \
+                'exad-corona-label' in tag.get('class', []) and \
+                'Cases:' in tag.text
+        tag = soup.find(condition)
+        total = tag.find_next_sibling().text
+        return tag.parent, int(only_digits(total))
+
+    @staticmethod
+    def uganda(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h5' and \
+                'mb-0 f18 txt-color' in ' '.join(tag.get('class', [])) and \
+                'CUMULATIVE CASES' in tag.text
+        tag = soup.find(condition).parent
+        total = tag.h2.text
+        return tag.parent, int(only_digits(total))

@@ -51,7 +51,7 @@ if __name__ == '__main__':
             for country, url in posts_websites.items():
                 t = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
                 p = f"data/{country.lower()}_{t}.html"
-                command = f'wget -4 -O "{p}" -U "{user}" --connect-timeout=1 --read-timeout=10 --limit-rate=500K -e robots=off "{url}"'
+                command = f'wget -4 -O "{p}" -U "{user}" --no-check-certificate --connect-timeout=1 --read-timeout=10 --limit-rate=500K -e robots=off "{url}"'
                 os.system(command)
                 try:
                     if os.stat(p).st_size == 0:

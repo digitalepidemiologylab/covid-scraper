@@ -11,8 +11,8 @@ class SoupSelenium:
                 return False
             return tag.name == 'div' and \
                 len(tag.contents) == 1 and \
-                'dpPositivGetestet' in tag.get('data-key', ['']) and \
-                'fit' in tag.get('class', [''])
+                'dpPositivGetestet' in tag.get('data-key', []) and \
+                'fit' in tag.get('class', [])
         tag = soup.find(condition)
         # print('tag', tag)
         return tag, int(only_digits(tag.contents[0]))
@@ -202,3 +202,62 @@ class SoupSelenium:
         tags = soup.find_all(condition)
         assert len(tags) == 1
         return tags[0], int(only_digits(tags[0].contents[0]))
+
+    # AFRO
+    @staticmethod
+    def botswana(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                'kpi-label' in tag.get('class', []) and \
+                'Total Confirmed Botswana Cases' in tag.text
+        tag = soup.find(condition)
+        total = only_digits(tag.find_next_sibling().text)
+        return tag.parent, int(total)
+
+    @staticmethod
+    def cape_verde(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'svg' and \
+                'Nº  de Casos Confirmados' in tag.get('aria-label', '') and \
+                '.' in tag.get('aria-label', '') and \
+                '(' not in tag.get('aria-label', '')
+        tag = soup.find(condition)
+        return tag, int(only_digits(tag['aria-label']))
+
+    @staticmethod
+    def gabon(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'strong' and \
+                'CAS CONFIRMÉS' in tag.text
+        tag = soup.find(condition).parent.parent.parent
+        total = tag.find_next_sibling().text
+        return tag.parent, int(only_digits(total))
+
+    @staticmethod
+    def gambia(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'svg' and \
+                'Total Cases' in tag.get('aria-label', '') and \
+                '.' in tag.get('aria-label', '')
+        tag = soup.find(condition)
+        return tag, int(only_digits(tag['aria-label']))
+
+    @staticmethod
+    def zambia(soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'div' and \
+                'title text-center' == ' '.join(tag.get('class', [])) and \
+                'Total in Zambia' in tag.text
+        tag = soup.find(condition)
+        total = tag.find_next_sibling().find_next_sibling().h3.text
+        return tag, int(only_digits(total))

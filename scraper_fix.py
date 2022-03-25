@@ -47,11 +47,35 @@ logger.addHandler(writetofile_handler)
 
 
 if __name__ == '__main__':
-    country = 'Poland'
-    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
+    country = 'Italy'
+    ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-03') and p.name.endswith('json')])
     for i in range(len(ps) - 1):
         t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
-        copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
+        copy_latest_if_csv_changed(ps[i], ps[i + 1], country, CSVS['Italy'], Csv, logger)
+
+    # country = 'Italy'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('json')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_csv_changed(ps[i], ps[i + 1], country, CSVS['Italy'], Csv, logger)
+
+    # country = 'Madagascar'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupPosts, logger)
+
+    # country = 'Madagascar'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-03') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupPosts, logger)
+
+    # country = 'Poland'
+    # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])
+    # for i in range(len(ps) - 1):
+    #     t = Filename(ps[i + 1]).datetime.strftime('%Y-%m-%d_%H-%M-%S')
+    #     copy_latest_if_page_changed(ps[i], ps[i + 1], country, SoupSelenium, logger)
 
     # country = 'Monaco'
     # ps = sorted([p for p in Path('data/processing_exception').iterdir() if p.name.startswith(f'{country.lower()}_2022-02') and p.name.endswith('html')])

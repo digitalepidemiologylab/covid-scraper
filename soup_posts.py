@@ -1,6 +1,8 @@
+from inspect import classify_class_attrs
 import logging
 from logging.handlers import RotatingFileHandler
 import re
+import unicodedata
 
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import TimeoutException
@@ -112,3 +114,119 @@ class SoupPosts:
         #     post_tag.contents[0]
         # ).group(1).replace('.', '')
         return url, None
+
+    @classmethod
+    def algeria(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'Coronavirus:' in tag.contents[0]
+        tag = soup.find(condition)
+        url = 'https://www.aps.dz' + tag['href']
+        return tag, url
+
+    @classmethod
+    def angola(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h2' and \
+                'COVID-19' in tag.contents[0]
+        tag = soup.find(condition).parent.parent.parent.parent
+        url = 'https://governo.gov.ao' + tag['href']
+        return tag, url
+
+    @classmethod
+    def burkina_faso(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'Maladie à Coronavirus' in tag.get('title', '')
+        tag = soup.find(condition)
+        url = tag['href']
+        return tag, url
+
+    @classmethod
+    def comoros(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h5' and \
+                'card-title' in tag.get('class', []) and \
+                'Pandémie COVID' in tag.text
+        tag = soup.find(condition).parent
+        url = 'https://stopcoronavirus.km/' + tag.a['href']
+        return tag, url
+
+    @classmethod
+    def cote_divoire_two(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'Point de la Situation de la COVID-19' in tag.text
+        tag = soup.find(condition)
+        url = tag['href']
+        return tag, url
+
+    @classmethod
+    def kenya(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'Press Statement on Covid-19' in tag.text
+        tag = soup.find(condition)
+        url = tag['href']
+        return tag, url
+
+    @classmethod
+    def madagascar(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'COVID-19' in unicodedata.normalize(
+                    'NFKC', tag.text) and \
+                'Situation épidémiologique' in unicodedata.normalize(
+                    'NFKC', tag.text)
+        tag = soup.find(condition)
+        url = tag['href']
+        return tag, url
+
+    @classmethod
+    def senegal(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'a' and \
+                'Coronavirus : Communiqué de Presse' in tag.text
+        tag = soup.find(condition)
+        url = 'https://www.sante.gouv.sn' + tag['href']
+        return tag, url
+
+    @classmethod
+    def south_africa_one(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h2' and \
+                'blog-shortcode-post-title entry-title' in ' '.join(tag.get('class', [])) and \
+                'Update on Covid-19' in tag.text
+        tag = soup.find(condition)
+        url = tag.a['href']
+        return tag, url
+
+    @classmethod
+    def south_africa_two(cls, soup):
+        def condition(tag):
+            if tag is None:
+                return False
+            return tag.name == 'h3' and \
+                'elementor-post__title' in tag.get('class', []) and \
+                'LATEST CONFIRMED CASES OF COVID-19 IN SOUTH AFRICA' in tag.text
+        tag = soup.find(condition)
+        url = tag.a['href']
+        return tag, url

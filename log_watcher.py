@@ -7,9 +7,7 @@ import os
 import boto3
 from botocore.exceptions import ClientError
 
-from constants import LOGGER_BACKUP_COUNT
-
-LOG_FILES = ['log_wgets.txt', 'log_selenium.txt', 'log_posts.txt', 'log_csvs.txt']
+from constants import LOGGER_BACKUP_COUNT, LOG_FILES
 
 # https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-sdk-python.html
 SENDER = "Crowdbreaks <info@crowdbreaks.org>"

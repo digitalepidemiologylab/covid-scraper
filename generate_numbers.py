@@ -6,7 +6,11 @@ import os
 from pathlib import Path
 import time
 
-from constants import WEBSITES, WGET_DOWNLOADS, SELENIUM_DOWNLOADS, POSTS, CSVS, LOGGER_BACKUP_COUNT, GENERATED_NUMBERS_PATH
+from constants import (
+    WEBSITES, WGET_DOWNLOADS, WGET_DOWNLOADS_AFRO,
+    SELENIUM_DOWNLOADS, SELENIUM_DOWNLOADS_2, SELENIUM_DOWNLOADS_AFRO,
+    POSTS, CSVS, CSVS_AFRO_WHO, LOGGER_BACKUP_COUNT, GENERATED_NUMBERS_PATH
+)
 from helpers import send_to_numbers_csv, send_to_numbers_html
 from pandas_csvs import Csv
 from soup_posts import SoupPosts
@@ -87,7 +91,34 @@ if __name__ == '__main__':
             except FileNotFoundError:
                 pass
 
+    wget_websites = [k for k in WEBSITES if k in WGET_DOWNLOADS_AFRO]
+    for country in wget_websites:
+        ps = get_paths(country, later)
+        for p in ps:
+            try:
+                send_to_numbers_html(p, country, SoupWgets, logger)
+            except FileNotFoundError:
+                pass
+
     selenium_websites = [k for k in WEBSITES if k in SELENIUM_DOWNLOADS]
+    for country in selenium_websites:
+        ps = get_paths(country, later)
+        for p in ps:
+            try:
+                send_to_numbers_html(p, country, SoupSelenium, logger)
+            except FileNotFoundError:
+                pass
+
+    selenium_websites = [k for k in WEBSITES if k in SELENIUM_DOWNLOADS_2]
+    for country in selenium_websites:
+        ps = get_paths(country, later)
+        for p in ps:
+            try:
+                send_to_numbers_html(p, country, SoupSelenium, logger)
+            except FileNotFoundError:
+                pass
+
+    selenium_websites = [k for k in WEBSITES if k in SELENIUM_DOWNLOADS_AFRO]
     for country in selenium_websites:
         ps = get_paths(country, later)
         for p in ps:
@@ -111,5 +142,14 @@ if __name__ == '__main__':
         for p in ps:
             try:
                 send_to_numbers_csv(p, country, CSVS[country], Csv, logger)
+            except FileNotFoundError:
+                pass
+
+    for country in CSVS_AFRO_WHO:
+        print(country)
+        ps = get_paths('Chad', later)
+        for p in ps:
+            try:
+                send_to_numbers_csv(p, country, ',', Csv, logger)
             except FileNotFoundError:
                 pass

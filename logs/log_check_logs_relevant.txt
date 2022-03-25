@@ -1,0 +1,56 @@
+log_wgets.txt
+logs/log_wgets.txt
+2022-02-22, line 5319: 4:50:32.954000
+data/russia_2022-02-22_12-10-11.html
+data/armenia_2022-02-22_12-11-00.html
+data/france_2022-02-22_12-11-10.html
+logs/log_wgets.txt.1
+logs/log_wgets.txt.2
+
+log_wgets_afro.txt
+logs/log_wgets_afro.txt
+2022-02-15, line 2765: 20:35:21.601000
+data/equatorial_guinea_2022-02-16_11-00-44.html
+data/sierra_leone_2022-02-16_11-00-46.html
+2022-02-17, line 3891: 16:24:24.274000
+data/equatorial_guinea_2022-02-17_22-59-55.html
+data/ethiopia_2022-02-17_22-59-56.html
+data/nigeria_2022-02-17_22-59-57.html
+2022-02-18, line 4004: 5:46:53.248000
+data/nigeria_2022-02-18_08-34-05.html
+2022-02-20, line 5942: 9:29:52.711000
+data/nigeria_2022-02-20_12-20-04.html
+2022-02-22, line 8058: 6:17:52.58000
+data/nigeria_2022-02-22_12-09-51.html
+
+log_selenium.txt
+logs/log_selenium.txt
+2022-02-11, line 1306: 2:49:09.949000
+data/united_kingdom_2022-02-11_17-56-06.html
+logs/log_selenium.txt.1
+logs/log_selenium.txt.2
+logs/log_selenium.txt.3
+logs/log_selenium.txt.4
+
+log_selenium_2.txt
+logs/log_selenium_2.txt
+
+log_selenium_afro.txt
+logs/log_selenium_afro.txt
+2022-02-17, line 7271: 10:53:19.868000
+data/zambia_2022-02-17_14-56-08.html
+
+log_posts.txt
+logs/log_posts.txt
+logs/log_posts.txt.1
+logs/log_posts.txt.2
+logs/log_posts.txt.3
+
+log_csvs.txt
+logs/log_csvs.txt
+logs/log_csvs.txt.1
+2022-02-11, line 59951: 0:31:53.082000
+data/netherlands_2022-02-11_14-11-00.csv
+
+log_csvs_afro_who.txt
+logs/log_csvs_afro_who.txt

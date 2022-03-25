@@ -1,0 +1,145 @@
+2022-02-25 11:47:21,530 - check_logs - INFO - log_wgets.txt
+2022-02-25 11:47:21,530 - check_logs - INFO - logs/log_wgets.txt
+2022-02-25 11:47:22,402 - check_logs - INFO - 2022-02-22, line 5319: 4:50:32.954000
+data/russia_2022-02-22_12-10-11.html
+data/armenia_2022-02-22_12-11-00.html
+data/france_2022-02-22_12-11-10.html
+2022-02-25 11:47:23,585 - check_logs - INFO - logs/log_wgets.txt.1
+2022-02-25 11:47:28,486 - check_logs - INFO - 2022-02-06, line 45836: 2:23:09.744000
+OK
+2022-02-25 11:47:29,039 - check_logs - INFO - 2022-02-09, line 49747: 0:16:00.837000
+OK
+2022-02-25 11:47:29,560 - check_logs - INFO - 2022-02-11, line 53468: 0:30:15.934000
+OK
+2022-02-25 11:47:31,683 - check_logs - INFO - logs/log_wgets.txt.2
+2022-02-25 11:47:33,716 - check_logs - INFO - 2022-01-12, line 28559: 10:05:16.082000
+data/north_macedonia_2022-01-12_19-31-15.html
+data/switzerland_2022-01-12_19-31-23.html
+data/andorra_2022-01-12_19-32-00.html
+data/belarus_2022-01-12_19-32-04.html
+data/france_2022-01-12_19-32-09.html
+data/gibraltar_2022-01-12_19-32-10.html
+data/greece_2022-01-12_19-32-11.html
+data/luxembourg_2022-01-12_19-32-17.html
+
+2022-02-25 11:47:36,368 - check_logs - INFO - log_wgets_afro.txt
+2022-02-25 11:47:36,369 - check_logs - INFO - logs/log_wgets_afro.txt
+2022-02-25 11:47:36,757 - check_logs - INFO - 2022-02-15, line 2765: 20:35:21.601000
+data/equatorial_guinea_2022-02-16_11-00-44.html
+data/sierra_leone_2022-02-16_11-00-46.html
+2022-02-25 11:47:36,863 - check_logs - INFO - 2022-02-17, line 3561: 1:01:03.574000
+OK
+2022-02-25 11:47:36,909 - check_logs - INFO - 2022-02-17, line 3891: 16:24:24.274000
+data/equatorial_guinea_2022-02-17_22-59-55.html
+data/ethiopia_2022-02-17_22-59-56.html
+data/nigeria_2022-02-17_22-59-57.html
+2022-02-25 11:47:36,912 - check_logs - INFO - 2022-02-17, line 3908: 1:00:56.09000
+OK
+2022-02-25 11:47:36,916 - check_logs - INFO - 2022-02-18, line 3936: 1:00:21.341000
+OK
+2022-02-25 11:47:36,925 - check_logs - INFO - 2022-02-18, line 4004: 5:46:53.248000
+data/nigeria_2022-02-18_08-34-05.html
+2022-02-25 11:47:36,981 - check_logs - INFO - 2022-02-18, line 4399: 1:01:04.74000
+OK
+2022-02-25 11:47:36,997 - check_logs - INFO - 2022-02-18, line 4510: 7:06:59.22000
+OK
+2022-02-25 11:47:37,078 - check_logs - INFO - 2022-02-19, line 5074: 1:01:01.651000
+OK
+2022-02-25 11:47:37,165 - check_logs - INFO - 2022-02-19, line 5696: 0:32:53.275000
+OK
+2022-02-25 11:47:37,195 - check_logs - INFO - 2022-02-20, line 5920: 1:01:00.588000
+OK
+2022-02-25 11:47:37,198 - check_logs - INFO - 2022-02-20, line 5942: 9:29:52.711000
+data/nigeria_2022-02-20_12-20-04.html
+2022-02-25 11:47:37,433 - check_logs - INFO - 2022-02-21, line 7655: 1:01:00.852000
+OK
+2022-02-25 11:47:37,438 - check_logs - INFO - 2022-02-21, line 7686: 5:39:01.511000
+OK
+2022-02-25 11:47:37,487 - check_logs - INFO - 2022-02-22, line 8058: 6:17:52.58000
+data/nigeria_2022-02-22_12-09-51.html
+2022-02-25 11:47:37,488 - check_logs - INFO - 2022-02-22, line 8064: 11:16:30.241000
+OK
+
+2022-02-25 11:47:37,970 - check_logs - INFO - log_selenium.txt
+2022-02-25 11:47:37,970 - check_logs - INFO - logs/log_selenium.txt
+2022-02-25 11:47:38,147 - check_logs - INFO - 2022-02-11, line 1242: 0:31:32.768000
+OK
+2022-02-25 11:47:38,156 - check_logs - INFO - 2022-02-11, line 1306: 2:49:09.949000
+data/united_kingdom_2022-02-11_17-56-06.html
+2022-02-25 11:47:41,060 - check_logs - INFO - logs/log_selenium.txt.1
+2022-02-25 11:47:41,850 - check_logs - INFO - logs/log_selenium.txt.2
+2022-02-25 11:47:42,086 - check_logs - INFO - 2022-02-06, line 1539: 2:23:40.74000
+OK
+2022-02-25 11:47:46,339 - check_logs - INFO - logs/log_selenium.txt.3
+2022-02-25 11:47:46,714 - check_logs - INFO - logs/log_selenium.txt.4
+2022-02-25 11:47:47,027 - check_logs - INFO - 2022-01-10, line 2050: 0:17:26.638000
+OK
+2022-02-25 11:47:50,553 - check_logs - INFO - 2022-01-27, line 30098: 17:14:23.981000
+data/estonia_2022-01-28_12-24-16.html
+data/lithuania_2022-01-28_12-26-02.html
+data/poland_2022-01-28_12-27-29.html
+2022-02-25 11:47:50,821 - check_logs - INFO - 2022-01-29, line 32257: 0:13:49.603000
+OK
+
+2022-02-25 11:47:54,085 - check_logs - INFO - log_selenium_2.txt
+2022-02-25 11:47:54,085 - check_logs - INFO - logs/log_selenium_2.txt
+
+2022-02-25 11:47:57,142 - check_logs - INFO - log_selenium_afro.txt
+2022-02-25 11:47:57,143 - check_logs - INFO - logs/log_selenium_afro.txt
+2022-02-25 11:47:57,311 - check_logs - INFO - 2022-02-12, line 1221: 0:10:36.34000
+OK
+2022-02-25 11:47:57,446 - check_logs - INFO - 2022-02-13, line 2225: 8:01:52.994000
+OK
+2022-02-25 11:47:58,056 - check_logs - INFO - 2022-02-16, line 6878: 3:41:26.861000
+OK
+2022-02-25 11:47:58,099 - check_logs - INFO - 2022-02-17, line 7271: 10:53:19.868000
+data/zambia_2022-02-17_14-56-08.html
+2022-02-25 11:47:58,166 - check_logs - INFO - 2022-02-17, line 7784: 0:12:19.365000
+OK
+2022-02-25 11:47:58,222 - check_logs - INFO - 2022-02-18, line 8218: 2:44:58.755000
+OK
+2022-02-25 11:47:58,812 - check_logs - INFO - 2022-02-21, line 12877: 0:54:24.157000
+OK
+2022-02-25 11:47:59,259 - check_logs - INFO - 2022-02-23, line 16417: 5:54:41.761000
+OK
+2022-02-25 11:47:59,528 - check_logs - INFO - 2022-02-24, line 20081: 1:13:01.901000
+OK
+2022-02-25 11:47:59,590 - check_logs - INFO - 2022-02-25, line 20622: 2:55:59.681000
+OK
+
+2022-02-25 11:47:59,599 - check_logs - INFO - log_posts.txt
+2022-02-25 11:47:59,599 - check_logs - INFO - logs/log_posts.txt
+2022-02-25 11:48:00,150 - check_logs - INFO - 2022-02-06, line 4058: 2:30:27.864000
+OK
+2022-02-25 11:48:01,135 - check_logs - INFO - 2022-02-11, line 11995: 0:31:42.855000
+OK
+2022-02-25 11:48:04,091 - check_logs - INFO - logs/log_posts.txt.1
+2022-02-25 11:48:07,362 - check_logs - INFO - 2022-01-28, line 42284: 1:11:36.663000
+OK
+2022-02-25 11:48:07,448 - check_logs - INFO - 2022-01-28, line 42284: 0:19:06.406000
+OK
+2022-02-25 11:48:09,229 - check_logs - INFO - logs/log_posts.txt.2
+Browser problems, no info whether lost data, also out of range
+2022-02-25 11:48:09,251 - check_logs - INFO - 2022-01-17, line 104: 23:37:28.598000
+2022-02-25 11:48:09,252 - check_logs - INFO - 2022-01-18, line 107: 1 day, 0:51:38.122000
+2022-02-25 11:48:09,252 - check_logs - INFO - 2022-01-19, line 108: 1 day, 20:17:32.927000
+2022-02-25 11:48:09,252 - check_logs - INFO - 2022-01-21, line 109: 3:57:56.023000
+2022-02-25 11:48:10,657 - check_logs - INFO - logs/log_posts.txt.3
+2022-02-25 11:48:12,999 - check_logs - INFO - 2022-01-12, line 24470: 2:18:18.594000
+OK
+2022-02-25 11:48:14,870 - check_logs - INFO - 2022-01-15, line 43221: 1 day, 10:43:46.492000
+data/monaco_2022-01-16_22-02-35.html
+2022-02-25 11:48:15,093 - check_logs - INFO - 2022-01-17, line 45631: 4:56:10.196000
+OK
+
+2022-02-25 11:48:15,432 - check_logs - INFO - log_csvs.txt
+2022-02-25 11:48:15,432 - check_logs - INFO - logs/log_csvs.txt
+2022-02-25 11:48:16,240 - check_logs - INFO - logs/log_csvs.txt.1
+2022-02-25 11:48:19,443 - check_logs - INFO - 2022-01-25, line 22275: 3:50:49.047000
+2022-02-25 11:48:22,241 - check_logs - INFO - 2022-02-06, line 53143: 2:26:28.237000
+2022-02-25 11:48:22,747 - check_logs - INFO - 2022-02-09, line 56703: 0:15:56.501000
+2022-02-25 11:48:23,210 - check_logs - INFO - 2022-02-11, line 59951: 0:31:53.082000
+data/netherlands_2022-02-11_14-11-00.csv
+
+2022-02-25 11:48:25,270 - check_logs - INFO - log_csvs_afro_who.txt
+2022-02-25 11:48:25,271 - check_logs - INFO - logs/log_csvs_afro_who.txt
