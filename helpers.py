@@ -61,8 +61,7 @@ def get_csv(p, sep, logger):
                 '%s: %s. Traceback: %s', type(exc).__name__, str(exc),
                 '; '.join(traceback.format_tb(exc.__traceback__)))
     else:
-        raise ValueError(
-            f"The format of file '{p.name}' should be CSV or JSON.")
+        logger.error(f"The format of file '{p.name}' should be CSV or JSON.")
 
 
 def get_soup(p):

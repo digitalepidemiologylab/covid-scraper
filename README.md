@@ -39,6 +39,7 @@ The structure of the scripts is as follows.
 - `logs`: logs for each scraper
 - `log_watcher.py`: monitors the logs and sends emails in case of errors (uses [AWS SES](https://aws.amazon.com/ses/))
 - `generate_numbers.py`: generates `data/logs/numbers_generated.json` using the collected HTML files in `data`
+- `check_logs.py`: checks logs for periods of inactivity of the scraper
 
 ## Installation
 

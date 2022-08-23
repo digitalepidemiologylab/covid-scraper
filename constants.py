@@ -39,7 +39,7 @@ WEBSITES = {
     'North_Macedonia': 'http://iph.mk/category/informacii/',  # PDFs with info
     'Poland': 'https://rcb-gis.maps.arcgis.com/apps/dashboards/fc789be735144881a5ea2c011f6c9265',
     # 'Portugal': 'https://covid19.min-saude.pt/relatorio-de-situacao/',
-    'Portugal': 'https://esriportugal.maps.arcgis.com/apps/dashboards/01bb26e8a53847338f1d508da7e7924a',
+    # 'Portugal': 'https://esriportugal.maps.arcgis.com/apps/dashboards/01bb26e8a53847338f1d508da7e7924a',
     # 'Romania': 'https://instnsp.maps.arcgis.com/apps/dashboards/5eced796595b4ee585bcdba03e30c127',
     'Romania': 'https://datelazi.ro/embed/confirmed_cases',
     'Russia': 'https://стопкоронавирус.рф',
@@ -151,7 +151,7 @@ XPATHS = {
 SLEEPS = {
     'Italy': 10,
     'Kosovo': 4,
-    'Portugal': 7,
+    'Portugal': 15,
     'Cape_Verde': 5,
     'Zambia': 4
 }
