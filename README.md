@@ -28,7 +28,13 @@ For processing HTML, I use [Beautiful Soup](https://www.crummy.com/software/Beau
 
 The structure of the scripts is as follows.
 - `constants.py`: constants needed around the other scripts
+- `check_logs.py`: checks logs for periods of inactivity of the scraper
+- `generate_numbers.py`: generates `data/logs/numbers_generated.json` using the collected HTML files in `data`
 - `helpers.py`: helper functions
+- `log_watcher.py`: monitors the logs and sends emails in case of errors (uses [AWS SES](https://aws.amazon.com/ses/))
+- `move_files.py`: helps moving files to separate folders by country when they pile up (for storing)
+- `scraper_fix.py`: helps manually fixing processing exceptions
+    - E.g. when a website changes whe way they present the data, the parser fails, and a processing exception occurs that needs to be manually fixed.
 - Helper classes
     - `soup_wgets.py`: `SoupWgets` class with static methods that process HTML for each country
     - `soup_selenium.py`: `SoupSelenium` class with static methods that process HTML for each country
@@ -37,9 +43,9 @@ The structure of the scripts is as follows.
 - Scraper scripts: `scraper_wgets.py`, `scraper_selenium.py`, `scraper_posts.py`, `scraper_csvs.py`
 - `data`: saved sources
 - `logs`: logs for each scraper
-- `log_watcher.py`: monitors the logs and sends emails in case of errors (uses [AWS SES](https://aws.amazon.com/ses/))
-- `generate_numbers.py`: generates `data/logs/numbers_generated.json` using the collected HTML files in `data`
-- `check_logs.py`: checks logs for periods of inactivity of the scraper
+    - `numbers_generated.json`: the latest output of `generate_numbers.py`
+        - It's more reliable than `numbers.json` bc this file is generated after manually dealing with all processing exceptions.
+    - `numbers.json`: the file datetime info is automatically written to in the process of scraping (lacks processing exceptions)
 
 ## Installation
 
